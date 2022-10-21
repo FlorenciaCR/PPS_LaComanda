@@ -79,40 +79,40 @@ Fecha de Inicio: A definir
 Fecha de Final: A definir  
 Branch: Beta-Fernandez  
 
-### Florencia Colondro 👩
+### Florencia Colodro 👩
 
 + 1-Modulo: Alta de clientes  
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
-Branch: Alfa-Colondro  
+Branch: Alfa-Colodro  
 
 + 2-Modulo: Qr de la Mesa  
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
-Branch: Alfa-Colondro  
+Branch: Alfa-Colodro  
 
 + 3-Modulo: Encuesta de Cliente  
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
-Branch: Alfa-Colondro   
+Branch: Alfa-Colodro   
 
 + 4-Modulo: Agregar un nuevo cliente registrado   
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
-Branch: Alfa-Colondro
+Branch: Alfa-Colodro
 
 + 5-Modulo: Confirmar pedidos  
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
-Branch: Alfa-Colondro
+Branch: Alfa-Colodro
 
 + 6-Modulo: Push Notification(Completo)  
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
-Branch: Alfa-Colondro  
+Branch: Alfa-Colodro  
 
 + 7-Modulo: Juego para un 20% de descuento  
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
-Branch: Alfa-Colondro
+Branch: Alfa-Colodro
 
