@@ -2,9 +2,9 @@
 ## Tareas:
 ### Lucas Valdiviezo 🧑
 
-+ 1-Modulo: Hacer logo  
-Fecha de Inicio: 26/10/2022
-Fecha de Final: A definir  
++ 1-Modulo: Hacer logo ✅    
+Fecha de Inicio: 26/10/2022  
+Fecha de Final: 26/10/2022  
 Branch: Beta-Valdiviezo  
 
 + 2-Modulo: Hacer splash dinamico  
@@ -22,12 +22,12 @@ Fecha de Inicio: A definir
 Fecha de Final: A definir  
 Branch: Beta-Valdiviezo 
 
-+ 5-Modulo: Encuesta de Empleados
++ 5-Modulo: Encuesta de Empleados  
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
 Branch: Beta-Valdiviezo 
 
-+ 6-Modulo: Ingresar al local
++ 6-Modulo: Ingresar al local    
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
 Branch: Beta-Valdiviezo 
@@ -54,7 +54,7 @@ Fecha de Inicio: A definir
 Fecha de Final: A definir  
 Branch: Gamma-Fernandez  
 
-+ 5-Modulo: Splash Estatico 
++ 5-Modulo: Splash Estatico   
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
 Branch: Gamma-Fernandez 
@@ -64,7 +64,7 @@ Fecha de Inicio: A definir
 Fecha de Final: A definir  
 Branch: Gamma-Fernandez 
 
-+ 7-Modulo: Envio de mail automatico
++ 7-Modulo: Envio de mail automatico      
 Fecha de Inicio: 26/10/2022  
 Fecha de Final: A definir  
 Branch: Gamma-Fernandez 
@@ -72,7 +72,7 @@ Branch: Gamma-Fernandez
 
 ### Florencia Colodro 👩
 
-+ 1-Modulo: Configurar proyecto firebase 
++ 1-Modulo: Configurar proyecto firebase   
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
 Branch: Alfa-Colodro  
@@ -103,7 +103,7 @@ Fecha de Inicio: A definir
 Fecha de Final: A definir  
 Branch: Alfa-Colodro
 
-+ 6-Modulo: Push Notification(Completo)  
++ 7-Modulo: Push Notification(Completo)  
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
 Branch: Alfa-Colodro  
