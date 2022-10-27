@@ -72,9 +72,9 @@ Branch: Gamma-Fernandez
 
 ### Florencia Colodro 👩
 
-+ 1-Modulo: Configurar proyecto firebase   
-Fecha de Inicio: A definir  
-Fecha de Final: A definir  
++ 1-Modulo: Configurar proyecto firebase✅     
+Fecha de Inicio: 26/10/2022  
+Fecha de Final: 26/10/2022  
 Branch: Alfa-Colodro  
 
 
