@@ -2,7 +2,7 @@
 ## Tareas:
 ### Lucas Valdiviezo 🧑
 
-+ 1-Modulo: Hacer logo y Splash Estatico
++ 1-Modulo: Hacer logo y Splash Estatico  
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
 Branch: Gamma-Valdiviezo  
