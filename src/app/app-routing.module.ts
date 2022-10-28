@@ -10,9 +10,21 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+
+  },
+  {
     path: 'alta-cliente',
     loadChildren: () => import('./pages/alta-cliente/alta-cliente.module').then( m => m.AltaClientePageModule)
+
+  },
+  {
+    path: 'menu-duenio',
+    loadChildren: () => import('./pages/menu-duenio/menu-duenio.module').then( m => m.MenuDuenioPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+
   },
 
 ];
