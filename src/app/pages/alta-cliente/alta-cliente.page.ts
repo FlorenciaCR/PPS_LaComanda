@@ -20,9 +20,7 @@ export class AltaClientePage implements OnInit {
   fotoSubida : boolean = false;
   webPath : string = "";
 
-  constructor(private formBuilder : FormBuilder) 
-  { 
-  }
+
 
   ngOnInit() {
   }
