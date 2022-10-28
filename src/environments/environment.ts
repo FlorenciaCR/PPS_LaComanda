@@ -4,6 +4,11 @@
 
 export const environment = {
   production: false,
+  appName: "Los Pollos Hermanos",
+  emailService: {
+    serviceID: "service_acg4g0p",
+    templateID: "template_m4gxh9q"
+  },
   firebaseConfig : {
     apiKey: "AIzaSyDrNV-AZmTwq_HNuFYBKU62uVh--hZPPIE",
     authDomain: "pps-lacomanda.firebaseapp.com",
