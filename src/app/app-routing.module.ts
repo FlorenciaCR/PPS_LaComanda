@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'menu-duenio',
+    loadChildren: () => import('./pages/menu-duenio/menu-duenio.module').then( m => m.MenuDuenioPageModule)
+  },
 ];
 
 @NgModule({
