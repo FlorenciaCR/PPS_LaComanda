@@ -8,14 +8,14 @@ const routes: Routes = [
   },
   {
     path: '',
-
     redirectTo: 'login',
     pathMatch: 'full'
-    
+
   },
   {
     path: 'alta-cliente',
     loadChildren: () => import('./pages/alta-cliente/alta-cliente.module').then( m => m.AltaClientePageModule)
+
   },
   {
     path: 'menu-duenio',
@@ -26,8 +26,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
 
   },
-];
+  {
+    path: 'alta-anonimo',
+    loadChildren: () => import('./pages/alta-anonimo/alta-anonimo.module').then( m => m.AltaAnonimoPageModule)
+  },
 
+
+];
 
 @NgModule({
   imports: [
@@ -36,3 +41,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
