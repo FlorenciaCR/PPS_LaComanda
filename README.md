@@ -1,6 +1,4 @@
 # Los pollos hermanos 🐔🐔🍗🍗
-## Tareas:
-### Lucas Valdiviezo 🧑
 
 # 📌 Primera semana  
 ## Florencia Colodro  
@@ -13,8 +11,10 @@ Alta duenio supervisor
 
 ## Maximiliano Fernandez    
 Login  
-Conexion a firebase   
--------------------------------------
+Conexion a firebase  
+
+## Tareas:
+### Lucas Valdiviezo 🧑
 + 1-Modulo: Hacer logo ✅    
 Fecha de Inicio: 26/10/2022  
 Fecha de Final: 26/10/2022  
