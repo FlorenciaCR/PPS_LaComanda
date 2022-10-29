@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire/compat';
@@ -19,6 +19,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    BrowserAnimationsModule,
+    AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     ReactiveFormsModule,
