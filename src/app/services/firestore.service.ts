@@ -1,4 +1,8 @@
 import { Injectable } from '@angular/core';
+<<<<<<< HEAD
+=======
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+>>>>>>> main
 import { Observable } from 'rxjs';
 
 @Injectable({

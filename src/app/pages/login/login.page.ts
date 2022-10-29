@@ -9,7 +9,6 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
   email : string = "";
   password : string = "";
   form : FormGroup;
