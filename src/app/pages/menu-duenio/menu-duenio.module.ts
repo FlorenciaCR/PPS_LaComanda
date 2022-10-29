@@ -1,20 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
 import { MenuDuenioPageRoutingModule } from './menu-duenio-routing.module';
 
 import { MenuDuenioPage } from './menu-duenio.page';
+import { AltaDuenioSupComponent } from 'src/app/components/alta-duenio-sup/alta-duenio-sup.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MenuDuenioPageRoutingModule
+    MenuDuenioPageRoutingModule,
+    ReactiveFormsModule,
+    MatSlideToggleModule 
   ],
-  declarations: [MenuDuenioPage]
+  declarations: [MenuDuenioPage,AltaDuenioSupComponent]
 })
 export class MenuDuenioPageModule {}

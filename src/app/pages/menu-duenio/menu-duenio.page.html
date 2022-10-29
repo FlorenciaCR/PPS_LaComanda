@@ -1,9 +1,12 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>menuDuenio</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <ion-item color="light">
+    <ion-select interface="popover" color="medium" placeholder="Elija una opcion" (ionChange)="handleChange($event)"
+      class="select">
+      <ion-select-option value="dueñoSup">Alta Dueño/Supervisor</ion-select-option>
+      <ion-select-option value="deshabilitar">Deshabilitar Cliente</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <div *ngIf="opcionDuenio">
+    <app-alta-duenio-sup></app-alta-duenio-sup>
+  </div>
 </ion-content>
