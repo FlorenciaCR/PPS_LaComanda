@@ -2,6 +2,19 @@
 ## Tareas:
 ### Lucas Valdiviezo 🧑
 
+# 📌 Primera semana  
+## Florencia Colodro  
+Alta cliente  
+Alta anonimo  
+
+## Lucas Valdiviezo  
+Splash estatico  
+Alta duenio supervisor  
+
+## Maximiliano Fernandez    
+Login  
+Conexion a firebase   
+-------------------------------------
 + 1-Modulo: Hacer logo ✅    
 Fecha de Inicio: 26/10/2022  
 Fecha de Final: 26/10/2022  
@@ -12,9 +25,9 @@ Fecha de Inicio: A definir
 Fecha de Final: A definir  
 Branch: Beta-Valdiviezo 
 
-+ 3-Modulo: Alta de dueño / supervisor  
-Fecha de Inicio: A definir  
-Fecha de Final: A definir  
++ 3-Modulo: Alta de dueño / supervisor  ✅
+Fecha de Inicio: 28/10/2022    
+Fecha de Final: 28/10/2022   
 Branch: Beta-Valdiviezo
 
 + 4-Modulo: Qr de ingreso local  
@@ -59,9 +72,9 @@ Fecha de Inicio: A definir
 Fecha de Final: A definir  
 Branch: Gamma-Fernandez 
 
-+ 6-Modulo: Hacer el login y registro  
-Fecha de Inicio: A definir  
-Fecha de Final: A definir  
++ 6-Modulo: Hacer el login y registro ✅  
+Fecha de Inicio: 28/10/2022  
+Fecha de Final: 29/10/2022  
 Branch: Gamma-Fernandez 
 
 + 7-Modulo: Envio de mail automatico      
@@ -78,9 +91,9 @@ Fecha de Final: 26/10/2022
 Branch: Alfa-Colodro  
 
 
-+ 2-Modulo: Alta de clientes  
-Fecha de Inicio: A definir  
-Fecha de Final: A definir  
++ 2-Modulo: Alta de cliente ✅    
+Fecha de Inicio: 28/10/2022  
+Fecha de Final: 29/10/2022  
 Branch: Alfa-Colodro  
 
 + 3-Modulo: Qr de la Mesa  
