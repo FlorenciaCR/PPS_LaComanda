@@ -50,7 +50,11 @@ export class AltaClientePage implements OnInit {
     this.fs.usuario = this.cliente;
     this.fs.agregarCliente(this.cliente);
     //this.sendPush();
-
+    let usuario ={
+      email: this.cliente.email,
+      clave: this.cliente.clave
+    }
+    this.as.registro(usuario);
     this.MS.enviarAviso(this.cliente);
     
     setTimeout(() => {
