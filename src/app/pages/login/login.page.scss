@@ -1,58 +1,52 @@
-.invalid
-{
+.invalid {
   color: #DD5353;
   font-weight: bold;
 }
 
 ion-content {
-  //--background: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0, 0.185)), url("../../../assets/images/bg-auth.png");
-
-  
-  // --background: rgb(0,0,0);
-  // --background: linear-gradient(180deg, rgba(0,0,0,1) 23%, rgba(168,168,168,1) 80%, rgba(198,198,198,1) 100%);
-
   --background: transparent !important;
 
-    background-image: url('../../../assets/img/pollo.jpg');    
-    background-repeat: no-repeat;
-	  background-size: 100% 100%;
-    background-position: center;
-    background-attachment: fixed;
+  background-image: url('../../../assets/img/pollo.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-attachment: fixed;
 
-    --overflow: hidden;
+  --overflow: hidden;
 }
 
 .items {
- 
+
   --background: #fffefffd;
   position: relative;
 }
 
-.boton
-{
-  background: #8D2CE2;
+.boton {
+  background: #FD841F;
 }
 
 ::ng-deep .customize {
-  background: #8D2CE2;
+  background: #FD841F;
 }
 
 .loading {
- 
-  animation: rotate 1.5s linear infinite; 
-  //animation: myAnim 1s ease 0s 1 normal both;
+
+  animation: rotate 1.5s linear infinite;
 }
 
 @keyframes rotate {
   0% {
     transform: rotate(0deg)
   }
+
   20% {
     transform: rotate(25deg)
   }
+
   99% {
     transform: rotate(360deg)
   }
+
   100% {
     transform: rotate(360deg)
   }

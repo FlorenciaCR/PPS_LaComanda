@@ -14,7 +14,6 @@ import {MatMenuModule} from '@angular/material/menu';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    IonicModule,
     LoginPageRoutingModule,
     MatMenuModule,
     IonicModule,
