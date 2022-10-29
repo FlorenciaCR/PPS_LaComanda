@@ -8,8 +8,14 @@ const routes: Routes = [
   },
   {
     path: '',
+
     redirectTo: 'login',
     pathMatch: 'full'
+    
+  },
+  {
+    path: 'alta-cliente',
+    loadChildren: () => import('./pages/alta-cliente/alta-cliente.module').then( m => m.AltaClientePageModule)
   },
   {
     path: 'menu-duenio',
@@ -18,8 +24,10 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+
   },
 ];
+
 
 @NgModule({
   imports: [
