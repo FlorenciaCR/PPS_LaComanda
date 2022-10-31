@@ -9,10 +9,9 @@ import { FirestoreService } from './firestore.service';
 })
 export class AuthService {
   loading : boolean = false;
-  logeado : any;
   usuarios : any;
   usuariosArray : any = [];
-  objUsuarioLogeado : any;
+  loggedUser:any;
 
   constructor(public auth : AngularFireAuth, public router : Router, private toastController : ToastController, private fs : FirestoreService) 
   { 
@@ -50,23 +49,36 @@ export class AuthService {
   }
 
 
-  login(email : string, password : string)
+  login(email : string, password : string,actualUser:any)
   {
     this.loading = true;
     this.auth.signInWithEmailAndPassword(email,password).then(() =>
     {
-      for (const item of this.usuariosArray) {
-        if(item.email == email && item.clave == password){
-         this.logeado = item;
-       } 
-     }    
-      setTimeout(() => {
-        this.loading = false;
-        this.router.navigate(['/home']);
-      }, 2500); 
+      this.loggedUser = actualUser;  
+      switch(this.loggedUser.perfil){
+        case 'Dueño':
+          setTimeout(() => {
+            this.loading = false;
+            this.router.navigate(['/menu-duenio']);
+          }, 2500); 
+          break;
+        case 'Supervisor':
+          setTimeout(() => {
+            this.loading = false;
+            this.router.navigate(['/menu-duenio']);
+          }, 2500); 
+          break;
+        case 'cliente':
+          setTimeout(() => {
+            this.loading = false;
+            this.router.navigate(['/home']);
+          }, 2500); 
+          break;
+      }
     }).catch(response =>{
       
       this.loading = false;
+      this.loggedUser = null;
       if(response.code == 'auth/user-not-found')
       {
           this.MostrarToast('La contraseña o el email son incorrectos').then((toast : any) => {

@@ -45,7 +45,7 @@ export class AltaAnonimoPage implements OnInit {
        
     this.fs.usuario = this.cliente;
     this.fs.agregarCliente(this.cliente);
-    this.as.logeado = this.cliente;
+    this.as.loggedUser = this.cliente;
     setTimeout(() => {
         this.form.reset(); 
         this.fotoSubida = false;

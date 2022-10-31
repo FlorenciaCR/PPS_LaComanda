@@ -15,8 +15,8 @@ export class LoginPage implements OnInit {
   password: string = "";
   form: FormGroup;
   perfil: any;
-
-  clientes: any = [];
+  actualUser:any;
+  usuarios: any = [];
 
   constructor(private formBuilder: FormBuilder, public as: AuthService, private router: Router, public fs: FirestoreService,
     private toast: ToastController) {
@@ -29,17 +29,8 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
     this.fs.traerUsuarios().subscribe(value => {
-      this.clientes = value;
-      //this.clientes = this.clientes.filter(this.filtarHabilitado);
+      this.usuarios = value;
     });
-  }
-
-  filtarHabilitado(item) {
-    if (item.habilitado != "si") { 
-      return false;
-    } else {
-      return true;
-    }
   }
 
   sonido(a: boolean) {
@@ -71,36 +62,24 @@ export class LoginPage implements OnInit {
     this.email = this.form.get('email')?.value;
     this.password = this.form.get('password')?.value;
 
-    let habilitado;
-    console.log(this.clientes)
-    for (const iterator of this.clientes) {
-      console.log(iterator);
-      if (iterator.email == this.email) {
-        habilitado = iterator.habilitado;
+    for (const user of this.usuarios) {
+      if(user.email == this.email){
+        this.actualUser = user;
       }
     }
 
-    console.log(habilitado);
-
-    // if (habilitado == "si") {
-      this.as.login(this.email, this.password);
-      setTimeout(() => {
-        this.form.reset();
-        if (this.fs.sonido) {
-          this.reproducirSonido("audioInicio3");
+    if(this.actualUser.perfil == 'cliente'){
+      if(this.actualUser.habilitado == "si"){
+        this.as.login(this.email,this.password,this.actualUser);
+      }else{
+        if(this.fs.sonido){
+        this.reproducirSonido("audioError");
         }
-      }, 5000);
-    // } else if (habilitado == "no") {
-    //   if (this.fs.sonido) {
-    //     this.reproducirSonido("audioError");
-    //   }
-    //   this.DangerToastHabilitado();
-    // } else {
-    //   if (this.fs.sonido) {
-    //     this.reproducirSonido("audioError");
-    //   }
-    //   this.DangerToastRechazado();
-    // }
+        this.DangerToastHabilitado();
+      }
+    }else{
+      this.as.login(this.email,this.password,this.actualUser);
+    }
 
 
   }
