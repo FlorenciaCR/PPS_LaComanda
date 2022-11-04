@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
 //import { PushService } from 'src/app/services/push.service';
 import { ScannerService } from 'src/app/services/scanner.service';
@@ -41,10 +42,9 @@ export class HomeClientePage implements OnInit {
   esperarPago : boolean = false;
   variableNormal : boolean = true;
 
-  constructor(private fs : FirestoreService/*, private push : PushService*/, private sf : ScannerService, private toastController : ToastController, private router : Router) 
+  constructor(private as:AuthService,private fs : FirestoreService/*, private push : PushService*/, private sf : ScannerService, private toastController : ToastController, private router : Router) 
   { 
     //Busco en la coleccion de Lista de espera si esta, sino esta sigo en pantalla esperaAsignacionMesa
-    console.log(this.fs.usuario);
     this.escaneoQR = true;
   }
 
@@ -55,9 +55,9 @@ export class HomeClientePage implements OnInit {
       this.usuariosArray = value;
       for (let item of this.usuariosArray) 
       {
-        if(item.nombre == this.fs.usuario.nombre)
+        
+        if(item.email == this.as.loggedUser)
         {
-          console.log("EN EL IF DEL PRIMER SUBSCRIBE");
           this.usuarioActual = item;
           if(this.usuarioActual.mesa != 0){
             this.mesa = true;
@@ -71,12 +71,10 @@ export class HomeClientePage implements OnInit {
     this.fs.traerPedidos().subscribe(value =>{
       this.pedido = value;
       this.cargarArray();
-
-      console.log(this.fs.usuario.nombre);
       for (const iterator of this.pedidoArray) 
       {
         console.log(iterator.usuario.nombre);
-        if(iterator.usuario.nombre == this.fs.usuario.nombre)
+        if(iterator.usuario.nombre == this.as.loggedUser.nombre)
         {
           console.log("pedidos");
           this.usuarioPedido = iterator;
@@ -92,7 +90,6 @@ export class HomeClientePage implements OnInit {
             if(iterator.pagoConfirmado)
             {
               this.esperarPago = false;
-              console.log("holaaaa");
             }
           }  
         }
