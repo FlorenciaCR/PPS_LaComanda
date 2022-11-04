@@ -39,7 +39,7 @@ export class PushService {
   }
 
   getUser(): void {
-    const aux = doc(this.firestore, `usuarios/${this.authS.logeado.id}`);
+    const aux = doc(this.firestore, `usuarios/${this.authS.loggedUser.id}`);
     docData(aux, { idField: 'id' }).subscribe(async (user) => {
       this.user = user;
       this.inicializar();

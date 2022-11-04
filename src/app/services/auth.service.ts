@@ -71,7 +71,7 @@ export class AuthService {
         case 'cliente':
           setTimeout(() => {
             this.loading = false;
-            this.router.navigate(['/home']);
+            this.router.navigate(['/home-cliente']);
           }, 2500); 
           break;
       }

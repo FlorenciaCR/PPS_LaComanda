@@ -28,7 +28,11 @@ const routes: Routes = [
   {
     path: 'alta-anonimo',
     loadChildren: () => import('./pages/alta-anonimo/alta-anonimo.module').then( m => m.AltaAnonimoPageModule)
+  },  {
+    path: 'home-cliente',
+    loadChildren: () => import('./pages/home-cliente/home-cliente.module').then( m => m.HomeClientePageModule)
   }
+
 ];
 
 

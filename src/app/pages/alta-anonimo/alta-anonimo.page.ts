@@ -54,7 +54,7 @@ export class AltaAnonimoPage implements OnInit {
         if(this.fs.sonido){
           this.reproducirSonido();
         }
-        this.router.navigate(['/home']);
+        this.router.navigate(['/home-cliente']);
     }, 3000);
 
   }
