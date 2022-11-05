@@ -1,18 +1,35 @@
 # Los pollos hermanos 🐔🐔🍗🍗
 
 # 📌 Primera semana  
-## Florencia Colodro  
+### Florencia Colodro  
 Alta cliente  
 Alta anonimo  
 
-## Lucas Valdiviezo  
+### Lucas Valdiviezo  
 Splash estatico  
 Alta duenio supervisor  
 
-## Maximiliano Fernandez    
+### Maximiliano Fernandez    
 Login  
 Conexion a firebase  
 
+# 📌 Segunda semana  
+### Florencia Colodro  
+Encuesta empleado    
+
+### Lucas Valdiviezo  
+Splash estatico  
+Encuesta cliente
+
+### Maximiliano Fernandez    
+Push Notification  
+Encuesta supervisor 
+  
+   
+   
+   
+   
+---------------------------------------------------
 ## Tareas:
 ### Lucas Valdiviezo 🧑
 + 1-Modulo: Hacer logo ✅    
@@ -35,9 +52,9 @@ Fecha de Inicio: A definir
 Fecha de Final: A definir  
 Branch: Beta-Valdiviezo 
 
-+ 5-Modulo: Encuesta de Empleados  
-Fecha de Inicio: A definir  
-Fecha de Final: A definir  
++ 5-Modulo: Encuesta de Empleados  ✅  
+Fecha de Inicio: 4/11/22  
+Fecha de Final: 4/11/22 
 Branch: Beta-Valdiviezo 
 
 + 6-Modulo: Ingresar al local    
@@ -62,9 +79,9 @@ Fecha de Inicio: A definir
 Fecha de Final: A definir  
 Branch: Gamma-Fernandez  
 
-+ 3-Modulo: Encuesta de Surpervisor    
-Fecha de Inicio: A definir  
-Fecha de Final: A definir  
++ 3-Modulo: Encuesta de Surpervisor ✅     
+Fecha de Inicio: 4/11/22  
+Fecha de Final: 4/11/22 
 Branch: Gamma-Fernandez 
 
 + 4-Modulo: Realizar pedidos (platos y bebidas)  
@@ -107,7 +124,7 @@ Fecha de Final: A definir
 Branch: Alfa-Colodro  
 
 + 4-Modulo: Encuesta de Cliente  
-Fecha de Inicio: A definir  
+Fecha de Inicio: 4/11/22  
 Fecha de Final: A definir  
 Branch: Alfa-Colodro   
 
