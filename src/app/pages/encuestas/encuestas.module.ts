@@ -13,6 +13,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
 import { EncuestaSupervisorComponent } from 'src/app/components/encuesta-supervisor/encuesta-supervisor.component';
+import { EncuestaEmpleadoComponent } from 'src/app/components/encuesta-empleado/encuesta-empleado.component';
 
 @NgModule({
   imports: [
@@ -26,6 +27,6 @@ import { EncuestaSupervisorComponent } from 'src/app/components/encuesta-supervi
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [EncuestasPage,EncuestaClienteComponent, EncuestaSupervisorComponent]
+  declarations: [EncuestasPage,EncuestaClienteComponent, EncuestaSupervisorComponent,EncuestaEmpleadoComponent]
 })
 export class EncuestasPageModule {}

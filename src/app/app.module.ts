@@ -14,10 +14,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
-import { EncuestaEmpleadoComponent } from './components/encuesta-empleado/encuesta-empleado.component';
 
 @NgModule({
-  declarations: [AppComponent,EncuestaEmpleadoComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
