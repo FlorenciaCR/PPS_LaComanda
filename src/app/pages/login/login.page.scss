@@ -1,6 +1,9 @@
 .invalid {
-  color: #DD5353;
+  color: red;
   font-weight: bold;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 5px;
 }
 
 ion-content {
