@@ -15,7 +15,6 @@ const routes: Routes = [
   {
     path: 'alta-cliente',
     loadChildren: () => import('./pages/alta-cliente/alta-cliente.module').then( m => m.AltaClientePageModule)
-
   },
   {
     path: 'menu-duenio',
@@ -28,13 +27,15 @@ const routes: Routes = [
   {
     path: 'alta-anonimo',
     loadChildren: () => import('./pages/alta-anonimo/alta-anonimo.module').then( m => m.AltaAnonimoPageModule)
-  },  {
+  },
+  {
     path: 'home-cliente',
     loadChildren: () => import('./pages/home-cliente/home-cliente.module').then( m => m.HomeClientePageModule)
   },
   {
-    path: 'menu-encuestas',
-    loadChildren: () => import('./pages/menu-encuestas/menu-encuestas.module').then( m => m.MenuEncuestasPageModule)
+    path: 'alta-empleado',
+    loadChildren: () => import('./pages/alta-empleado/alta-empleado.module').then( m => m.AltaEmpleadoPageModule)
+
   }
 
 ];

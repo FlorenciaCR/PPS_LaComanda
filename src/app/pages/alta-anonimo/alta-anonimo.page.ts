@@ -7,6 +7,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
 import { ImagenesService } from 'src/app/services/imagenes.service';
 import { MailService } from 'src/app/services/mail.service';
+import { PushService } from 'src/app/services/push.service';
 import { ScannerService } from 'src/app/services/scanner.service';
 
 
@@ -27,7 +28,7 @@ export class AltaAnonimoPage implements OnInit {
   fotoSubida : boolean = false;
   webPath : string = "";
 
-  constructor(private formBuilder : FormBuilder, private fs : FirestoreService, public as : AuthService, private router : Router,private sf : ScannerService, private imageStore : ImagenesService, private MS : MailService) 
+  constructor(private formBuilder : FormBuilder, private fs : FirestoreService, public as : AuthService, private router : Router,private sf : ScannerService, private imageStore : ImagenesService, private MS : MailService, private push : PushService) 
   { 
   
     this.form = this.formBuilder.group({
@@ -139,7 +140,7 @@ export class AltaAnonimoPage implements OnInit {
     })
   }
 
-  /* sendPush() {
+  sendPush() {
     console.log("asd");
     this.push
       .sendPushNotification({
@@ -156,7 +157,7 @@ export class AltaAnonimoPage implements OnInit {
       .subscribe((data) => {
         console.log(data);
       });
-  } */
+  }
 
   reproducirSonido()
   {

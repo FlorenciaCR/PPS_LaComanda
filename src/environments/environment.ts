@@ -9,6 +9,9 @@ export const environment = {
     serviceID: "service_acg4g0p",
     templateID: "template_m4gxh9q"
   },
+  fcmUrl: 'https://fcm.googleapis.com/fcm/send',
+  fcmServerKey:
+    'AAAANnCBkBo:APA91bG_gRZVvsay1wjN-PGh0AYBp7oA8g22iplqK1mNr4vgHeGWD1tQFcL1r6sj6YxWVcsZZYvUfw5t3j83MBU27vkSUMc4RoIU_2zMWxZ2oy9ebIECkMfImJexp2QKJ9yvT5TkzvXh',
   firebaseConfig : {
     apiKey: "AIzaSyDrNV-AZmTwq_HNuFYBKU62uVh--hZPPIE",
     authDomain: "pps-lacomanda.firebaseapp.com",

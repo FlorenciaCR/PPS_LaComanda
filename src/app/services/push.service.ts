@@ -29,10 +29,12 @@ export class PushService {
   
   async inicializar(): Promise<void> {
     this.addListeners();
-    // Verificamos que este en un dispositivo y no en una PC y tambien que el usuario no tegna seteado el token
+    // Verificamos que este en un dispositivo y no en una Web y tambien que el usuario no tegna seteado el token
     if (this.platform.is('capacitor') && this.user.token === '') {
       const result = await PushNotifications.requestPermissions();
+      // Si el usuario tiene permisos para enviar push notifications
       if (result.receive === 'granted') {
+        // Registro de push notification
         await PushNotifications.register();
       }
     }
@@ -46,25 +48,25 @@ export class PushService {
     });
   }
 
-  // sendPushNotification(req): Observable<any> {
-  //   console.log("push notification");
-  //   return this.http.post<Observable<any>>(environment.fcmUrl, req, {
-  //     headers: {
-  //       // eslint-disable-next-line @typescript-eslint/naming-convention
-  //       Authorization: `key=${environment.fcmServerKey}`,
-  //       // eslint-disable-next-line @typescript-eslint/naming-convention
-  //       'Content-Type': 'application/json',
-  //     },
-  //   });
-  // }
+  sendPushNotification(req): Observable<any> {
+    console.log("push notification");
+    return this.http.post<Observable<any>>(environment.fcmUrl, req, {
+      headers: {
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        Authorization: `key=${environment.fcmServerKey}`,
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        'Content-Type': 'application/json',
+      },
+    });
+  }
   
   private async addListeners(): Promise<void> {
-    console.log("asdad");
+    console.log("push notification finalizado sin errores");
     //Ocurre cuando el registro de las push notifications finaliza sin errores
     await PushNotifications.addListener(
       'registration',
       async (token: Token) => {
-        //AcÃ¡ deberiamos asociar el token a nuestro usario en nuestra bd
+        //Aca deberiamos asociar el token a nuestro usario en nuestra bd
         console.log('Registration token: ', token.value);
         const aux = doc(this.firestore, `usuarios/${this.user.id}`);
         await updateDoc(aux, {

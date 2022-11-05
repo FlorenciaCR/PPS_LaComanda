@@ -25,7 +25,7 @@ Fecha de Inicio: A definir
 Fecha de Final: A definir  
 Branch: Beta-Valdiviezo 
 
-+ 3-Modulo: Alta de dueño / supervisor  ✅
++ 3-Modulo: Alta de dueño / supervisor  ✅  
 Fecha de Inicio: 28/10/2022    
 Fecha de Final: 28/10/2022   
 Branch: Beta-Valdiviezo
@@ -41,15 +41,20 @@ Fecha de Final: A definir
 Branch: Beta-Valdiviezo 
 
 + 6-Modulo: Ingresar al local    
-Fecha de Inicio: A definir  
+Fecha de Inicio: 03/11/2022  
 Fecha de Final: A definir  
+Branch: Beta-Valdiviezo 
+
++ 7-Modulo: Creacion de la imagen del Splash Estatico ✅   
+Fecha de Inicio: 27/10/22  
+Fecha de Final: 27/10/22  
 Branch: Beta-Valdiviezo 
 
 ### Maximiliano Fernandez 👨‍🦱
 
-+ 1-Modulo: Alta de empleados  
-Fecha de Inicio: A definir  
-Fecha de Final: A definir  
++ 1-Modulo: Alta de empleados ✅    
+Fecha de Inicio: 31/10/2022  
+Fecha de Final: 31/10/2022  
 Branch: Gamma-Fernandez  
  
 + 2-Modulo: Qr de propina  
@@ -107,7 +112,7 @@ Fecha de Final: A definir
 Branch: Alfa-Colodro   
 
 + 5-Modulo: Agregar un nuevo cliente registrado   
-Fecha de Inicio: A definir  
+Fecha de Inicio: 04/11/2022  
 Fecha de Final: A definir  
 Branch: Alfa-Colodro
 

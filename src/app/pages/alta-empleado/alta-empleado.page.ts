@@ -2,92 +2,78 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { uploadString } from 'firebase/storage';
-import { Cliente } from 'src/app/interfaces/cliente';
+import { Empleado } from 'src/app/interfaces/empleado';
 import { AuthService } from 'src/app/services/auth.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
 import { ImagenesService } from 'src/app/services/imagenes.service';
-import { MailService } from 'src/app/services/mail.service';
-import { PushService } from 'src/app/services/push.service';
-//import { PushService } from 'src/app/services/push.service';
 import { ScannerService } from 'src/app/services/scanner.service';
+import {MatSlideToggleChange} from '@angular/material/slide-toggle';
 
 
 @Component({
-  selector: 'app-alta-cliente',
-  templateUrl: './alta-cliente.page.html',
-  styleUrls: ['./alta-cliente.page.scss'],
+  selector: 'app-alta-empleado',
+  templateUrl: './alta-empleado.page.html',
+  styleUrls: ['./alta-empleado.page.scss'],
 })
-export class AltaClientePage implements OnInit {
-  perfil : string = "anonimo";
+export class AltaEmpleadoPage implements OnInit {
+  perfil : string;
   form : FormGroup;
-  cliente : Cliente;
+  empleado : Empleado;
   foto : any;
   capturedPhoto : any = "";
   url : any = "";
   storage : any;
   fotoSubida : boolean = false;
   webPath : string = "";
+  slideMetre : boolean = false;
+  slideMozo : boolean = false;
+  slideCocinero : boolean = false;
+  slideBartender : boolean = false;
 
-  constructor(private formBuilder : FormBuilder, public fs : FirestoreService, public as : AuthService, private router : Router,private sf : ScannerService, private imageStore : ImagenesService, private MS : MailService, private push : PushService) 
+  constructor(private formBuilder : FormBuilder, private fs : FirestoreService, public as : AuthService, private router : Router,private sf : ScannerService, private imageStore : ImagenesService) 
   { 
-  
     this.form = this.formBuilder.group({
       'nombre' : ['',[Validators.required,Validators.minLength(2)]],
       'apellido' : ['',[Validators.required,Validators.minLength(2)]],
       'dni' : ['',[Validators.required,Validators.minLength(8),Validators.maxLength(8)]],
-      'email' : ['',[Validators.required,Validators.email]],
-      'password' : ['',[Validators.required,Validators.minLength(6)]]
+      'cuil': ['',[Validators.required,Validators.minLength(11),Validators.maxLength(11)]]
     });
-    
   }
 
   ngOnInit() {
   }
 
-  public altaCliente()
+  altaEmpleado()
   {
     this.as.loading = true;
        
-    this.fs.usuario = this.cliente;
-    this.fs.agregarCliente(this.cliente);
-    //this.sendPush();
-    let usuario ={
-      email: this.cliente.email,
-      clave: this.cliente.clave
-    }
-    this.as.registro(usuario);
-    this.MS.enviarAviso(this.cliente);
+    this.fs.agregarEmpleado(this.empleado)
     
     setTimeout(() => {
         this.form.reset(); 
         this.fotoSubida = false;
         this.as.loading = false;
         this.webPath = "";
-        if(this.fs.sonido){
-          this.reproducirSonido("audioInicio3");
-        }
-        this.router.navigate(['/login']);
-    }, 2500);
+        this.slideMetre = false;
+        this.slideMozo = false;
+        this.slideCocinero = false;
+        this.slideBartender = false;
+      }, 2500);
 
   }
 
   agregarFoto()
   { 
-    this.cliente = {
+    this.empleado = {
       nombre : this.form.get('nombre')?.value,
       apellido : this.form.get('apellido')?.value,
       DNI : this.form.get('dni')?.value,
+      CUIL: this.form.get('cuil')?.value,
+      perfil: this.perfil,
       foto : "",
-      email : this.form.get('email')?.value,
-      clave : this.form.get('password')?.value,
-      habilitado : 'no',
-      encuesta : null,
-      perfil : "cliente",
-      mesa : 0,
-      juegoJugado: false,
-      descuento: ""
+      encuesta : null
     };
-    this.imageStore.addNewToGallery(this.cliente).then((data) =>{
+    this.imageStore.addNewToGallery(this.empleado).then((data) =>{
       this.as.loading = true;
       this.storage = data.storage;
       this.url = data.url;
@@ -96,7 +82,7 @@ export class AltaClientePage implements OnInit {
       uploadString(this.storage,this.capturedPhoto.dataUrl, 'data_url').then((data) =>{    
         this.url.getDownloadURL().subscribe((url1 : any)=>{
           this.webPath = url1;
-          this.cliente.foto = url1;
+          this.empleado.foto = url1;
           setTimeout(() => {
             this.as.loading = false;
           }, 2000);
@@ -113,6 +99,7 @@ export class AltaClientePage implements OnInit {
     let apellido : string;
     let nombreFinal : string;
     let apellidoFinal : string;
+    let cuilFinal : number;
     this.sf.test().then((data) => {
       
       datos = data.split('@');
@@ -120,6 +107,7 @@ export class AltaClientePage implements OnInit {
       apellido = datos[1];
       nombreFinal = nombre[0];
       apellidoFinal = apellido[0];
+      cuilFinal = (datos[7])[0] + (datos[7])[1] + datos[4] + (datos[7])[2];
       
       for(let i = 1; i < nombre.length; i++)
       {
@@ -150,46 +138,62 @@ export class AltaClientePage implements OnInit {
       this.form.get('apellido')?.setValue(apellidoFinal);
       this.form.get('nombre')?.setValue(nombreFinal);
       this.form.get('dni')?.setValue(datos[4]);
+      this.form.get('cuil')?.setValue(cuilFinal);
       this.sf.stopScan();
     })
   }
 
-  
-  sendPush() {
-    console.log("asd");
-    this.push
-      .sendPushNotification({
-        // eslint-disable-next-line @typescript-eslint/naming-convention
-        registration_ids: [
-          // eslint-disable-next-line max-len
-          'f5VPIwXvRVSXodIjAeLLho:APA91bHeqPI7nlKpd0n3CbxhjifzTZ2jXVOtxwg_x-4qtgb1fVPjEet5PXfIxjNvHxRytOmT1qb2kJji85J5A_dJLt09kaz9hbD2hmH2a7xy1Sz2LboAcIjNSn-bp5q05C1CeLFU2QUe',
-        ],
-        notification: {
-          title: 'Nuevo cliente',
-          body: 'Hay un nuevo cliente esperando a ser habilitado.',
-        },
-      })
-      .subscribe((data) => {
-        console.log(data);
-      });
+  onChangeMetre(ob: MatSlideToggleChange) {
+    if(ob.checked){
+      this.slideMetre = true;
+      this.slideMozo = false;
+      this.slideCocinero = false;
+      this.slideBartender = false;
+      this.perfil = 'Metre';
+    }else{
+      this.slideMetre = false;
+      this.perfil = '';
+    }
   }
 
-  reproducirSonido(dato : string)
-  {
-    let ruta : string = '../../../assets/sonidos/';
-    let nombreArchivo : string = "";
-    let audioNombre : string = "";
+  onChangeMozo(ob: MatSlideToggleChange) {
 
-    audioNombre = dato + ".mp3"; 
-    nombreArchivo = ruta + audioNombre;
-
-    this.reproducir(nombreArchivo);
-           
+    if(ob.checked){
+      this.slideMetre = false;
+      this.slideMozo = true;
+      this.slideCocinero = false;
+      this.slideBartender = false;
+      this.perfil = 'Mozo';
+    }else{
+      this.slideMozo = false;
+      this.perfil = '';
+    }
   }
 
-  reproducir(ruta : string)
-  {
-    let audio = new Audio(ruta);
-    audio.play();   
+  onChangeCocinero(ob: MatSlideToggleChange) {
+    if(ob.checked){
+      this.slideMetre = false;
+      this.slideMozo = false;
+      this.slideCocinero = true;
+      this.slideBartender = false;
+      this.perfil = 'Cocinero';
+    }else{
+      this.slideCocinero = false;
+      this.perfil = '';
+    }
   }
+
+  onChangeBartender(ob: MatSlideToggleChange) {
+    if(ob.checked){
+      this.slideMetre = false;
+      this.slideMozo = false;
+      this.slideCocinero = false;
+      this.slideBartender = true;
+      this.perfil = 'Bartender';
+    }else{
+      this.slideBartender = false;
+      this.perfil = '';
+    }
+  }
+
 }

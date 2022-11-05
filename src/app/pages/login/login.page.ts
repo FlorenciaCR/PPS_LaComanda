@@ -117,14 +117,14 @@ export class LoginPage implements OnInit {
         this.router.navigate(['/alta-anonimo']);
         break;
       case 7:
-        this.email = "fmaximiliano443@gmail.com";
+        this.email = "lucasvaldiviezo80@gmail.com";
         this.password = "123456";
         this.form.get('email')?.setValue(this.email);
         this.form.get('password')?.setValue(this.password);
         break;
       case 8:
-        this.email = "supervisor@supervisor.com";
-        this.password = "supervisor123";
+        this.email = "fmaximiliano443@gmail.com";
+        this.password = "123456";
         this.form.get('email')?.setValue(this.email);
         this.form.get('password')?.setValue(this.password);
         break;
