@@ -7,6 +7,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
 import { ImagenesService } from 'src/app/services/imagenes.service';
 import { MailService } from 'src/app/services/mail.service';
+import { PushService } from 'src/app/services/push.service';
 //import { PushService } from 'src/app/services/push.service';
 import { ScannerService } from 'src/app/services/scanner.service';
 
@@ -27,7 +28,7 @@ export class AltaClientePage implements OnInit {
   fotoSubida : boolean = false;
   webPath : string = "";
 
-  constructor(private formBuilder : FormBuilder, public fs : FirestoreService, public as : AuthService, private router : Router,private sf : ScannerService, private imageStore : ImagenesService, private MS : MailService) 
+  constructor(private formBuilder : FormBuilder, public fs : FirestoreService, public as : AuthService, private router : Router,private sf : ScannerService, private imageStore : ImagenesService, private MS : MailService, private push : PushService) 
   { 
   
     this.form = this.formBuilder.group({
@@ -154,24 +155,24 @@ export class AltaClientePage implements OnInit {
   }
 
   
-  // sendPush() {
-  //   console.log("asd");
-  //   this.push
-  //     .sendPushNotification({
-  //       // eslint-disable-next-line @typescript-eslint/naming-convention
-  //       registration_ids: [
-  //         // eslint-disable-next-line max-len
-  //         'f5VPIwXvRVSXodIjAeLLho:APA91bHeqPI7nlKpd0n3CbxhjifzTZ2jXVOtxwg_x-4qtgb1fVPjEet5PXfIxjNvHxRytOmT1qb2kJji85J5A_dJLt09kaz9hbD2hmH2a7xy1Sz2LboAcIjNSn-bp5q05C1CeLFU2QUe',
-  //       ],
-  //       notification: {
-  //         title: 'Nuevo cliente',
-  //         body: 'Hay un nuevo cliente esperando a ser habilitado.',
-  //       },
-  //     })
-  //     .subscribe((data) => {
-  //       console.log(data);
-  //     });
-  // }
+  sendPush() {
+    console.log("asd");
+    this.push
+      .sendPushNotification({
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        registration_ids: [
+          // eslint-disable-next-line max-len
+          'f5VPIwXvRVSXodIjAeLLho:APA91bHeqPI7nlKpd0n3CbxhjifzTZ2jXVOtxwg_x-4qtgb1fVPjEet5PXfIxjNvHxRytOmT1qb2kJji85J5A_dJLt09kaz9hbD2hmH2a7xy1Sz2LboAcIjNSn-bp5q05C1CeLFU2QUe',
+        ],
+        notification: {
+          title: 'Nuevo cliente',
+          body: 'Hay un nuevo cliente esperando a ser habilitado.',
+        },
+      })
+      .subscribe((data) => {
+        console.log(data);
+      });
+  }
 
   reproducirSonido(dato : string)
   {
