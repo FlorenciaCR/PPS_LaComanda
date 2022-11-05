@@ -67,7 +67,7 @@ export class LoginPage implements OnInit {
         this.actualUser = user;
       }
     }
-
+    
     if(this.actualUser.perfil == 'cliente'){
       if(this.actualUser.habilitado == "si"){
         this.as.login(this.email,this.password,this.actualUser);
