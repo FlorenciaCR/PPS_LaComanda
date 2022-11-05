@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -12,6 +12,7 @@ import { EncuestaClienteComponent } from 'src/app/components/encuesta-cliente/en
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
+import { EncuestaSupervisorComponent } from 'src/app/components/encuesta-supervisor/encuesta-supervisor.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatCheckboxModule,
     MatMenuModule,
     FormsModule,
+    ReactiveFormsModule
   ],
-  declarations: [EncuestasPage,EncuestaClienteComponent]
+  declarations: [EncuestasPage,EncuestaClienteComponent, EncuestaSupervisorComponent]
 })
 export class EncuestasPageModule {}
