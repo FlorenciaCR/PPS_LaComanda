@@ -9,6 +9,7 @@ import { MenuDuenioPageRoutingModule } from './menu-duenio-routing.module';
 import { MenuDuenioPage } from './menu-duenio.page';
 import { AltaDuenioSupComponent } from 'src/app/components/alta-duenio-sup/alta-duenio-sup.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatPseudoCheckboxModule } from '@angular/material/core';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     IonicModule,
     MenuDuenioPageRoutingModule,
     ReactiveFormsModule,
-    MatSlideToggleModule 
+    MatSlideToggleModule,
+    MatPseudoCheckboxModule
   ],
   declarations: [MenuDuenioPage,AltaDuenioSupComponent]
 })

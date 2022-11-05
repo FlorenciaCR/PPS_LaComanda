@@ -8,7 +8,6 @@ import { HomeClientePageRoutingModule } from './home-cliente-routing.module';
 
 import { HomeClientePage } from './home-cliente.page';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { EncuestasComponent } from 'src/app/components/encuestas/encuestas.component';
 
 
 @NgModule({
@@ -18,7 +17,7 @@ import { EncuestasComponent } from 'src/app/components/encuestas/encuestas.compo
     IonicModule,
     HomeClientePageRoutingModule,
   ],
-  declarations: [HomeClientePage,EncuestasComponent],
+  declarations: [HomeClientePage],
   providers:[AngularFirestore]
 })
 export class HomeClientePageModule {}

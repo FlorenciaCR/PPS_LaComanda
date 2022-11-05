@@ -9,11 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-
+import { MatRadioModule } from '@angular/material/radio';
+import { EncuestaClienteComponent } from './components/encuesta-cliente/encuesta-cliente.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,EncuestaClienteComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
@@ -23,7 +26,11 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     ReactiveFormsModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatRadioModule,
+    MatCheckboxModule,
+    MatMenuModule,
+    FormsModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },AngularFirestore],
   bootstrap: [AppComponent],
