@@ -42,7 +42,8 @@ export class HomeClientePage implements OnInit {
   esperarPago : boolean = false;
   variableNormal : boolean = true;
 
-  constructor(private as:AuthService,private fs : FirestoreService/*, private push : PushService*/, private sf : ScannerService, private toastController : ToastController, private router : Router) 
+  constructor(private as:AuthService,private fs : FirestoreService/*, private push : PushService*/, 
+  private sf : ScannerService, private toastController : ToastController, private router : Router) 
   { 
     //Busco en la coleccion de Lista de espera si esta, sino esta sigo en pantalla esperaAsignacionMesa
     this.escaneoQR = true;
@@ -151,9 +152,7 @@ export class HomeClientePage implements OnInit {
 
   verEncuestas()
   {
-    this.todasEncuestas = true;
-    this.menuOpciones = false;
-    this.menuOpcionesConfirma = false;
+    this.router.navigate(['/encuestas']);
   }
 
   esconderEncuestas()

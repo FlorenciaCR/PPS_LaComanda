@@ -15,10 +15,6 @@ const routes: Routes = [
   {
     path: 'alta-cliente',
     loadChildren: () => import('./pages/alta-cliente/alta-cliente.module').then( m => m.AltaClientePageModule)
-<<<<<<< HEAD
-=======
-
->>>>>>> Alfa-FlorenciaColodro
   },
   {
     path: 'menu-duenio',
@@ -31,7 +27,6 @@ const routes: Routes = [
   {
     path: 'alta-anonimo',
     loadChildren: () => import('./pages/alta-anonimo/alta-anonimo.module').then( m => m.AltaAnonimoPageModule)
-<<<<<<< HEAD
   },
   {
     path: 'home-cliente',
@@ -41,19 +36,11 @@ const routes: Routes = [
     path: 'alta-empleado',
     loadChildren: () => import('./pages/alta-empleado/alta-empleado.module').then( m => m.AltaEmpleadoPageModule)
 
-  },  {
+  },
+  {
     path: 'encuestas',
     loadChildren: () => import('./pages/encuestas/encuestas.module').then( m => m.EncuestasPageModule)
   }
-
-
-=======
-  },  {
-    path: 'pages-encuesta-empleado',
-    loadChildren: () => import('./pages/pages-encuesta-empleado/pages-encuesta-empleado.module').then( m => m.PagesEncuestaEmpleadoPageModule)
-  }
-
->>>>>>> Alfa-FlorenciaColodro
 ];
 
 

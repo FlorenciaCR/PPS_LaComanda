@@ -1,3 +1,16 @@
+.contGeneral{
+  background-color: #a0dd94;
+  border-radius: 2px;
+  color: black;
+  padding: 10px;
+  margin:5%;
+}
+
+ion-label{
+  color: #000000 !important;  
+}
+
+
 .invalid
 {
   color: #8D2CE2;
@@ -8,6 +21,11 @@ ion-content {
   //--background: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0, 0.185)), url("../../../assets/images/bg-auth.png");
   --background: rgb(0,0,0);
   --background: linear-gradient(180deg, rgba(0,0,0,1) 23%, rgba(168,168,168,1) 80%, rgba(198,198,198,1) 100%);
+}
+
+mat-menu{
+  margin-left:auto;
+  margin-right: auto;
 }
 
 .items {
