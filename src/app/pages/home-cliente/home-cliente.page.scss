@@ -8,6 +8,12 @@
     --overflow: hidden;
 }
 
+.contenedorGeneral{
+    background-color: #FD841F; 
+    height: 100%; 
+    width: 100%
+}
+
 .fondo2{
   --background: transparent !important;
   background-color: #000000;
@@ -113,8 +119,3 @@
 }
 
 
-.contenedorGeneral{
-    background-color: #8D2CE2; 
-    height: 100%; 
-    width: 100%
-}

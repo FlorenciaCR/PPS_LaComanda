@@ -31,6 +31,10 @@ const routes: Routes = [
   },  {
     path: 'home-cliente',
     loadChildren: () => import('./pages/home-cliente/home-cliente.module').then( m => m.HomeClientePageModule)
+  },
+  {
+    path: 'menu-encuestas',
+    loadChildren: () => import('./pages/menu-encuestas/menu-encuestas.module').then( m => m.MenuEncuestasPageModule)
   }
 
 ];
