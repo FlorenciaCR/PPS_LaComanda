@@ -21,6 +21,7 @@ Encuesta empleado
 Menu Cliente  
 Splash estatico  
 Encuesta cliente
+Pantalla Encuestas
 
 ### Maximiliano Fernandez    
 Push Notification  
