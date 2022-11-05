@@ -28,7 +28,11 @@ const routes: Routes = [
   {
     path: 'alta-anonimo',
     loadChildren: () => import('./pages/alta-anonimo/alta-anonimo.module').then( m => m.AltaAnonimoPageModule)
+  },  {
+    path: 'pages-encuesta-empleado',
+    loadChildren: () => import('./pages/pages-encuesta-empleado/pages-encuesta-empleado.module').then( m => m.PagesEncuestaEmpleadoPageModule)
   }
+
 ];
 
 

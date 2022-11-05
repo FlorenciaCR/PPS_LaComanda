@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../encuesta-empleado/encuesta-empleado.component.scss"
+    ],
+    "names": [],
+    "file": "encuesta-empleado.component.css"
+}
