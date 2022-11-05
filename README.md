@@ -18,6 +18,7 @@ Conexion a firebase
 Encuesta empleado    
 
 ### Lucas Valdiviezo  
+Menu Cliente  
 Splash estatico  
 Encuesta cliente
 
