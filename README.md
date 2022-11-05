@@ -45,6 +45,11 @@ Fecha de Inicio: 03/11/2022
 Fecha de Final: A definir  
 Branch: Beta-Valdiviezo 
 
++ 7-Modulo: Creacion de la imagen del Splash Estatico ✅   
+Fecha de Inicio: 27/10/22  
+Fecha de Final: 27/10/22  
+Branch: Beta-Valdiviezo 
+
 ### Maximiliano Fernandez 👨‍🦱
 
 + 1-Modulo: Alta de empleados ✅    
