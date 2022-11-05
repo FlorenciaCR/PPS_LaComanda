@@ -36,7 +36,11 @@ const routes: Routes = [
     path: 'alta-empleado',
     loadChildren: () => import('./pages/alta-empleado/alta-empleado.module').then( m => m.AltaEmpleadoPageModule)
 
+  },  {
+    path: 'encuestas',
+    loadChildren: () => import('./pages/encuestas/encuestas.module').then( m => m.EncuestasPageModule)
   }
+
 
 ];
 

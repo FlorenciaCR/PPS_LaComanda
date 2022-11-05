@@ -12,11 +12,11 @@ import { environment } from 'src/environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatRadioModule } from '@angular/material/radio';
-import { EncuestaClienteComponent } from './components/encuesta-cliente/encuesta-cliente.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
+
 @NgModule({
-  declarations: [AppComponent,EncuestaClienteComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
@@ -30,7 +30,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatRadioModule,
     MatCheckboxModule,
     MatMenuModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },AngularFirestore],
   bootstrap: [AppComponent],
