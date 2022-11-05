@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuDuenioPage implements OnInit {
   opcionDuenio: boolean = false;
+  opcionDeshabilitado: boolean = false;
   constructor() { }
 
   ngOnInit() {
@@ -16,9 +17,11 @@ export class MenuDuenioPage implements OnInit {
     switch (e.detail.value) {
       case 'dueñoSup':
         this.opcionDuenio = true;
+        this.opcionDeshabilitado = false;
         break;
       case 'deshabilitar':
         this.opcionDuenio = false;
+        this.opcionDeshabilitado = true;
         break;
     }
   }
