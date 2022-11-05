@@ -15,6 +15,7 @@ const routes: Routes = [
   {
     path: 'alta-cliente',
     loadChildren: () => import('./pages/alta-cliente/alta-cliente.module').then( m => m.AltaClientePageModule)
+
   },
   {
     path: 'menu-duenio',
@@ -27,6 +28,7 @@ const routes: Routes = [
   {
     path: 'alta-anonimo',
     loadChildren: () => import('./pages/alta-anonimo/alta-anonimo.module').then( m => m.AltaAnonimoPageModule)
+
   },
   {
     path: 'home-cliente',
@@ -40,8 +42,29 @@ const routes: Routes = [
   {
     path: 'encuestas',
     loadChildren: () => import('./pages/encuestas/encuestas.module').then( m => m.EncuestasPageModule)
+  },
+  {
+    path: 'pregunta1',
+    loadChildren: () => import('./components/pagesEncuestaEmpleado/pregunta1/pregunta1.module').then( m => m.Pregunta1PageModule)
+  },
+  {
+    path: 'pregunta2',
+    loadChildren: () => import('./components/pagesEncuestaEmpleado/pregunta2/pregunta2.module').then( m => m.Pregunta2PageModule)
+  },
+  {
+    path: 'pregunta3',
+    loadChildren: () => import('./components/pagesEncuestaEmpleado/pregunta3/pregunta3.module').then( m => m.Pregunta3PageModule)
+  },
+  {
+    path: 'pregunta4',
+    loadChildren: () => import('./components/pagesEncuestaEmpleado/pregunta4/pregunta4.module').then( m => m.Pregunta4PageModule)
+  },
+  {
+    path: 'pregunta5',
+    loadChildren: () => import('./components/pagesEncuestaEmpleado/pregunta5/pregunta5.module').then( m => m.Pregunta5PageModule)
   }
 ];
+
 
 
 @NgModule({
@@ -51,4 +74,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
 

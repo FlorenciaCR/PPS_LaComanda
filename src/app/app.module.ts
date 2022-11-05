@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,9 +14,10 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
+import { EncuestaEmpleadoComponent } from './components/encuesta-empleado/encuesta-empleado.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,EncuestaEmpleadoComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
@@ -32,6 +33,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatMenuModule,
     FormsModule,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },AngularFirestore],
   bootstrap: [AppComponent],
 })

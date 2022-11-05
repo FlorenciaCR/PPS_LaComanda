@@ -36,7 +36,7 @@
         <div style="margin-top: 10%;">
           <form [formGroup]='form' (ngSubmit)="this.login()">
             <ion-item class="items"
-              style="--border-radius: 6px; margin-top: 25px; padding-left: 3%; padding-right: 3%;">
+              style="--border-radius: 6px; margin-top: 25px; padding-left: 3%; padding-right: 3%;margin-bottom: 2%;">
               <ion-label color="light">Correo: </ion-label>
               <ion-input type="email" placeholder="Correo" formControlName='email' name="email" required color="light">
               </ion-input>
@@ -48,7 +48,7 @@
             </div>
 
 
-            <ion-item class="items" style="margin-top: 10%; --border-radius: 6px; padding-left: 3%; padding-right: 3%; margin-bottom: 5%;;">
+            <ion-item class="items" style="margin-top: 10%; --border-radius: 6px; padding-left: 3%; padding-right: 3%; margin-bottom: 2%;">
               <ion-label color="light">Contraseña: </ion-label>
               <ion-input type="password" placeholder="Contraseña" formControlName='password' name="password" required
                 color="light"></ion-input>
@@ -57,12 +57,9 @@
               contraseña es requerida</small>
             <small class="invalid" *ngIf="form.controls.password.errors?.minlength">La contraseña debe tener 6
               caracteres o más</small>
-
           </form>
 
-
-
-          <img src="../../assets/icon/Icono.png" width="250px" height="250px"
+          <img style="margin-top: 5%;" src="../../assets/icon/Icono.png" width="250px" height="250px"
             [ngClass]="{'loading' : this.as.loading}" />
 
           <!--
