@@ -46,18 +46,18 @@ export class HomeClientePage implements OnInit {
   private sf : ScannerService, private toastController : ToastController, private router : Router) 
   { 
     //Busco en la coleccion de Lista de espera si esta, sino esta sigo en pantalla esperaAsignacionMesa
-    this.escaneoQR = true;
+    this.escaneoQR = false;
+    this.menuOpciones = true;
   }
 
   ngOnInit() 
   {
-    this.fs.traerUsuarios().subscribe((value) =>
+    this.fs.traerClientes().subscribe((value) =>
     {
       this.usuariosArray = value;
       for (let item of this.usuariosArray) 
       {
-        
-        if(item.email == this.as.loggedUser)
+        if(item.email == this.as.loggedUser.email)
         {
           this.usuarioActual = item;
           if(this.usuarioActual.mesa != 0){
@@ -171,13 +171,12 @@ export class HomeClientePage implements OnInit {
 
   entrarListaEspera()
   {
-    console.log(this.fs.usuario);
-    this.fs.agregarAListaDeEspera(this.fs.usuario);
+    this.fs.agregarAListaDeEspera(this.as.loggedUser);
     //this.sendPushMetre();
     this.menuOpciones = false;
-
     this.loading = true;
-    //this.esperaAsignacionMesa = true;
+    this.variableNormal = true;
+    console.log(this.usuarioActual);
   }
 
   /*sendPushMetre() 

@@ -9,274 +9,260 @@ import { Observable } from 'rxjs';
 export class FirestoreService {
   usuario: any;
 
-  sonido : boolean = true;
+  sonido: boolean = true;
 
   usuariosCollectionReference: any;
-  usuarios : Observable<any>;
-  usuariosArray : any = [];
+  usuarios: Observable<any>;
+  usuariosArray: any = [];
 
   consultasCollectionReference: any;
-  consultas : Observable<any>;
-  consultasArray : any = [];
+  consultas: Observable<any>;
+  consultasArray: any = [];
 
   listaEsperaCollectionReference: any;
-  listaEspera : Observable<any>;
-  listaEsperaArray : any = [];
+  listaEspera: Observable<any>;
+  listaEsperaArray: any = [];
 
   pedidosCollectionReference: any;
-  pedidos : Observable<any>;
-  pedidosArray : any = [];
+  pedidos: Observable<any>;
+  pedidosArray: any = [];
 
   clientesCollectionReference: any;
   clientes: Observable<any>;
 
-  clientesArray : any = [];
+  clientesArray: any = [];
 
   productosCollectionReference: any;
   productos: Observable<any>;
 
-  productosArray : any = [];
+  productosArray: any = [];
 
   encuestasClientesCollectionReference: any;
   encuestasClientes: Observable<any>;
 
-  encuestasClientesArray : any = [];
+  encuestasClientesArray: any = [];
 
   duenSupCollectionReference: any;
   duenSup: Observable<any>;
 
-  duenSupArray : any = [];
+  duenSupArray: any = [];
 
   empleadoCollectionReference: any;
   empleados: Observable<any>;
 
-  empleadoArray : any = [];
+  empleadoArray: any = [];
 
-  
+
   mesaCollectionReference: any;
   mesas: Observable<any>;
 
-  mesaArray : any = [];
+  mesaArray: any = [];
 
 
   encuestaEmpleadoCollectionReference: any;
   encuestasEmpleados: Observable<any>;
 
-  encuestaArray : any = [];
+  encuestaArray: any = [];
 
-  pedidosConfirmadosCollectionReference : any;
-  pedidosConfirmados : Observable<any>;
-  pedidosConfirmadosArray : any = [];
-  
-  constructor(private angularF : AngularFirestore) 
-  {
+  pedidosConfirmadosCollectionReference: any;
+  pedidosConfirmados: Observable<any>;
+  pedidosConfirmadosArray: any = [];
+
+  constructor(private angularF: AngularFirestore) {
 
     this.pedidosConfirmadosCollectionReference = this.angularF.collection<any>('pagosAConfirmar');
-    this.pedidosConfirmados = this.pedidosConfirmadosCollectionReference.valueChanges({idField : 'id'});
+    this.pedidosConfirmados = this.pedidosConfirmadosCollectionReference.valueChanges({ idField: 'id' });
 
     this.listaEsperaCollectionReference = this.angularF.collection<any>('listaEspera');
-    this.listaEspera = this.listaEsperaCollectionReference.valueChanges({idField: 'id'});
+    this.listaEspera = this.listaEsperaCollectionReference.valueChanges({ idField: 'id' });
 
     this.consultasCollectionReference = this.angularF.collection<any>('consultas');
-    this.consultas = this.consultasCollectionReference.valueChanges({idField: 'id'});
+    this.consultas = this.consultasCollectionReference.valueChanges({ idField: 'id' });
 
-    
+
     this.pedidosCollectionReference = this.angularF.collection<any>('pedidos');
-    this.pedidos = this.pedidosCollectionReference.valueChanges({idField: 'id'});
+    this.pedidos = this.pedidosCollectionReference.valueChanges({ idField: 'id' });
 
-    
+
     this.usuariosCollectionReference = this.angularF.collection<any>('usuarios');
-    this.usuarios = this.usuariosCollectionReference.valueChanges({idField: 'id'});
+    this.usuarios = this.usuariosCollectionReference.valueChanges({ idField: 'id' });
 
 
     this.clientesCollectionReference = this.angularF.collection<any>('clientes');
-    this.clientes = this.clientesCollectionReference.valueChanges({idField: 'id'});
+    this.clientes = this.clientesCollectionReference.valueChanges({ idField: 'id' });
 
 
     this.productosCollectionReference = this.angularF.collection<any>('productos');
-    this.productos = this.productosCollectionReference.valueChanges({idField: 'id'});
+    this.productos = this.productosCollectionReference.valueChanges({ idField: 'id' });
 
     this.encuestasClientesCollectionReference = this.angularF.collection<any>('encuestasClientes');
-    this.encuestasClientes = this.encuestasClientesCollectionReference.valueChanges({idField: 'id'});
+    this.encuestasClientes = this.encuestasClientesCollectionReference.valueChanges({ idField: 'id' });
 
 
     this.duenSupCollectionReference = this.angularF.collection<any>('duenSups');
-    this.duenSup = this.duenSupCollectionReference.valueChanges({idField: 'id'});
+    this.duenSup = this.duenSupCollectionReference.valueChanges({ idField: 'id' });
 
 
     this.empleadoCollectionReference = this.angularF.collection<any>('empleados');
-    this.empleados = this.empleadoCollectionReference.valueChanges({idField: 'id'});
+    this.empleados = this.empleadoCollectionReference.valueChanges({ idField: 'id' });
 
 
     this.mesaCollectionReference = this.angularF.collection<any>('mesas');
-    this.mesas = this.mesaCollectionReference.valueChanges({idField: 'id'});
+    this.mesas = this.mesaCollectionReference.valueChanges({ idField: 'id' });
 
 
     this.encuestaEmpleadoCollectionReference = this.angularF.collection<any>('encuestasEmpleados');
-    this.encuestasEmpleados = this.encuestaEmpleadoCollectionReference.valueChanges({idField: 'id'});
+    this.encuestasEmpleados = this.encuestaEmpleadoCollectionReference.valueChanges({ idField: 'id' });
 
 
   }
 
-  traerPedidosConfirmar()
-  {
+  traerPedidosConfirmar() {
     return this.pedidosConfirmados;
   }
 
-  traerClientes()
-  {
+  traerClientes() {
     return this.clientes;
   }
 
-  traerUsuarios()
-  {
+  traerUsuarios() {
     return this.usuarios;
   }
 
-  traerConsultas()
-  {
+  traerConsultas() {
     return this.consultas;
   }
 
-  traerlistaEspera()
-  {
+  traerlistaEspera() {
     return this.listaEspera;
   }
 
-  traerPedidos()
-  {
+  traerPedidos() {
     return this.pedidos;
   }
- 
-  traerProductos()
-  {
+
+  traerProductos() {
     return this.productos;
   }
 
-  traerEncuestasClientes()
-  {
+  traerEncuestasClientes() {
     return this.encuestasClientes;
   }
 
-  traerDuenSups()
-  {
+  traerDuenSups() {
     return this.duenSup;
   }
 
-  traerempleados()
-  {
+  traerempleados() {
     return this.empleados;
   }
 
-  traerMesas()
-  {
+  traerMesas() {
     return this.mesas;
   }
 
-  traerEncuestasEmpleados()
-  {
+  traerEncuestasEmpleados() {
     return this.encuestasEmpleados;
   }
 
-/*   modificarFoto(foto : any, id : any, coleccion : string)
-  {
-    return this.angularF.collection(coleccion).doc(id).update(foto);
-  } */
+  /*   modificarFoto(foto : any, id : any, coleccion : string)
+    {
+      return this.angularF.collection(coleccion).doc(id).update(foto);
+    } */
 
 
-  agregarEstadoPedidoConfirmarPago(objeto: any){
+  agregarEstadoPedidoConfirmarPago(objeto: any) {
     return this.angularF.collection('pagosAConfirmar').add(objeto);
   }
 
-  eliminarPedidoConfirmarPago(id_objeto: any){
+  eliminarPedidoConfirmarPago(id_objeto: any) {
     return this.angularF.collection('pagosAConfirmar').doc(id_objeto).delete();
   }
 
-  modificarCliente(objeto: any, id_objeto: any){
+  modificarCliente(objeto: any, id_objeto: any) {
     this.usuario = objeto;
     return this.angularF.collection('clientes').doc(id_objeto).update(objeto);
   }
-  
-  modificarUsuario(objeto: any, id_objeto: any){
+
+  modificarUsuario(objeto: any, id_objeto: any) {
     this.usuario = objeto;
     return this.angularF.collection('usuarios').doc(id_objeto).update(objeto);
   }
 
-  modificarMesa(objeto: any, id_objeto: any){
+  modificarMesa(objeto: any, id_objeto: any) {
     return this.angularF.collection('mesas').doc(id_objeto).update(objeto);
   }
 
   //Modificar Estado Pedido
-  modificarEstadoPedido(objeto: any, id_objeto: any){
+  modificarEstadoPedido(objeto: any, id_objeto: any) {
     return this.angularF.collection('pedidos').doc(id_objeto).update(objeto);
   }
 
-  eliminarListaEspera(id_objeto: any){
+  eliminarListaEspera(id_objeto: any) {
     return this.angularF.collection('listaEspera').doc(id_objeto).delete();
   }
 
-  agregarCliente(cliente : any)
-  {
-    this.clientesCollectionReference.add({...cliente});
-    this.usuariosCollectionReference.add({...cliente});
+  agregarCliente(cliente: any) {
+    this.clientesCollectionReference.add({ ...cliente });
+    this.usuariosCollectionReference.add({ ...cliente });
 
   }
 
-  agregarConsulta(consulta : any)
-  {
-    this.consultasCollectionReference.add({...consulta});
+  agregarConsulta(consulta: any) {
+    this.consultasCollectionReference.add({ ...consulta });
   }
 
-  eliminarConsulta(id_objeto: any){
+  eliminarConsulta(id_objeto: any) {
     return this.angularF.collection('consultas').doc(id_objeto).delete();
   }
 
-  agregarAListaDeEspera(cliente : any)
-  {
-    this.listaEsperaCollectionReference.add({...cliente});
+  agregarAListaDeEspera(user: any) {
+    this.clientes.subscribe(res => {
+      res.forEach(cliente => {
+        if (user.email == cliente.email) {
+          this.usuario = cliente;
+        }
+      });
+      if (this.usuario != null) {
+        this.listaEsperaCollectionReference.add({ ...this.usuario });
+      }
+    });
   }
 
-  agregarEmpleado(empleado : any)
-  {     
-    this.empleadoCollectionReference.add({...empleado});
-    this.usuariosCollectionReference.add({...empleado});
+  agregarEmpleado(empleado: any) {
+    this.empleadoCollectionReference.add({ ...empleado });
+    this.usuariosCollectionReference.add({ ...empleado });
   }
 
-  agregarProducto(producto : any)
-  {
-    this.productosCollectionReference.add({...producto});
+  agregarProducto(producto: any) {
+    this.productosCollectionReference.add({ ...producto });
   }
 
-  agregarEncuestaCliente(ec : any)
-  {
-    this.encuestasClientesCollectionReference.add({...ec});
+  agregarEncuestaCliente(ec: any) {
+    this.encuestasClientesCollectionReference.add({ ...ec });
   }
 
-  agregarDuenSup(duenSup : any)
-  {
+  agregarDuenSup(duenSup: any) {
     console.log("asdadas");
     console.log(duenSup);
-    this.duenSupCollectionReference.add({...duenSup});
-    this.usuariosCollectionReference.add({...duenSup});
+    this.duenSupCollectionReference.add({ ...duenSup });
+    this.usuariosCollectionReference.add({ ...duenSup });
   }
 
-  agregarMesa(mesa : any)
-  {
-    this.mesaCollectionReference.add({...mesa});
+  agregarMesa(mesa: any) {
+    this.mesaCollectionReference.add({ ...mesa });
   }
 
-  agregarEncuestaEmpleado(encuesta : any)
-  {
-    this.encuestaEmpleadoCollectionReference.add({...encuesta});
+  agregarEncuestaEmpleado(encuesta: any) {
+    this.encuestaEmpleadoCollectionReference.add({ ...encuesta });
   }
 
-  agregarPedido(pedido : any)
-  {
-    this.pedidosCollectionReference.add({...pedido});
+  agregarPedido(pedido: any) {
+    this.pedidosCollectionReference.add({ ...pedido });
   }
 
-  guardarToken(user:any, token:any){
+  guardarToken(user: any, token: any) {
     console.log(user);
-    this.angularF.collection('usuarios').doc(user.id).update({token:token});
+    this.angularF.collection('usuarios').doc(user.id).update({ token: token });
   }
 }

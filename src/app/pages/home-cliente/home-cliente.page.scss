@@ -1,11 +1,9 @@
 .fondo{
     --background: transparent !important;
-    //background-color: #8D2CE2;
-    background-color: #000000;
+    background-color: #a0dd94;
     height: 100%;
     width: 100%;    
-
-    --overflow: hidden;
+    overflow:hidden;
 }
 
 .contenedorGeneral{
@@ -42,6 +40,9 @@
     height: 32%
 }
 
+ion-fab{
+  position: absolute;
+}
 
 
 .loader:before,
