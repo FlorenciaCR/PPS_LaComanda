@@ -52,7 +52,7 @@ export class AltaEmpleadoPage implements OnInit {
     this.fs.agregarEmpleado(this.empleado);
 
     this.as.registro(this.empleado);
-    
+
     setTimeout(() => {
         this.form.reset(); 
         this.fotoSubida = false;
