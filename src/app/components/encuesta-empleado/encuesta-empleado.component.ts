@@ -16,6 +16,8 @@ export class EncuestaEmpleadoComponent implements OnInit {
   pregunta_2: boolean = false;
   pregunta_3: boolean = false;
   pregunta_4: boolean = false;
+  si: boolean;
+  no: boolean;
   pregunta_5: boolean = false;
 
   progreso: any = 0.05;
@@ -103,27 +105,64 @@ export class EncuestaEmpleadoComponent implements OnInit {
 
   funCapRespuesta1(event:any){
     //console.log(event);
-    this.respuesta_1 = event;
+    this.respuesta_1 = event.detail.value;
+    
   }
 
   funCapRespuesta2(event:any){
     //console.log(event);
-    this.respuesta_2 = event;
+    this.respuesta_2 = event.detail.value;
   }
 
   funCapRespuesta3(event:any){
     //console.log(event);
-    this.respuesta_3 = event;
+      switch (event.value) {
+        case "1":        
+          this.respuesta_3 = "Si";
+          break;
+        case "2":        
+          this.respuesta_3 = "No";
+          break;
+        case "3":        
+          this.respuesta_3 = "Mas o menos";
+          break;
+        default:
+          this.respuesta_3 = "";
+        break;
+    }
+}
+
+
+  funCapRespuesta4(value: any){
+    //console.log(event);
+    if(value == 1){
+      this.si = false;
+      this.no = false;
+      this.respuesta_4  = "Si";
+    }else if(value == 2){
+      this.si = false;
+      this.no = false;
+      this.respuesta_4  = "No";
+    }
   }
 
-  funCapRespuesta4(event:any){
+  funCapRespuesta5(value:any){
     //console.log(event);
-    this.respuesta_4 = event;
-  }
-
-  funCapRespuesta5(event:any){
-    //console.log(event);
-    this.respuesta_5 = event;
+    switch (value) {
+      case 1:        
+        document.getElementById("respuesta").setAttribute('value',"No");
+        this.respuesta_4 = "No";
+        break;
+      case 2:
+        document.getElementById("respuesta").setAttribute('value',"Muchos");
+        this.respuesta_4 = "Muchos";
+        break;
+      case 3:
+        document.getElementById("respuesta").setAttribute('value',"Pocos");
+        this.respuesta_4 = "Pocos";
+        break;
+    }   
+    //this.respuesta_4 = "";
   }
 
 
