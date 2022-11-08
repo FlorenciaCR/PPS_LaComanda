@@ -65,6 +65,10 @@ const routes: Routes = [
   },  {
     path: 'lista-productos',
     loadChildren: () => import('./pages/lista-productos/lista-productos.module').then( m => m.ListaProductosPageModule)
+  },
+  {
+    path: 'cuenta',
+    loadChildren: () => import('./pages/cuenta/cuenta.module').then( m => m.CuentaPageModule)
   }
 
 ];
