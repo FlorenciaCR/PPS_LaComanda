@@ -1,11 +1,3 @@
-<ion-header>
-  <ion-toolbar align="center">
-    <ion-title>Encuesta de Empleados</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
   <img src="../../assets/Spinner.png" style="display: block; position: absolute;margin-top: 50%; z-index: 101;" [ngClass]="{'loading' : this.as.loading}" *ngIf="this.as.loading"/>
   <ion-progress-bar color="tertiary" [value]="progreso"></ion-progress-bar>
 
@@ -222,5 +214,4 @@
       </ion-row>
 
     </ion-grid>    
-  </div>    
-</ion-content>
+</div>    
