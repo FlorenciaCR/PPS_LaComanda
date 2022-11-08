@@ -36,7 +36,9 @@ export class AltaEmpleadoPage implements OnInit {
       'nombre' : ['',[Validators.required,Validators.minLength(2)]],
       'apellido' : ['',[Validators.required,Validators.minLength(2)]],
       'dni' : ['',[Validators.required,Validators.minLength(8),Validators.maxLength(8)]],
-      'cuil': ['',[Validators.required,Validators.minLength(11),Validators.maxLength(11)]]
+      'cuil': ['',[Validators.required,Validators.minLength(11),Validators.maxLength(11)]],
+      'correo': ['',[Validators.required,Validators.email]],
+      'password': ['',[Validators.required,Validators.minLength(6)]]
     });
   }
 
@@ -65,6 +67,8 @@ export class AltaEmpleadoPage implements OnInit {
   agregarFoto()
   { 
     this.empleado = {
+      correo: this.form.get('correo')?.value,
+      password: this.form.get('password')?.value,
       nombre : this.form.get('nombre')?.value,
       apellido : this.form.get('apellido')?.value,
       DNI : this.form.get('dni')?.value,
