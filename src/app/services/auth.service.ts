@@ -74,6 +74,11 @@ export class AuthService {
             this.router.navigate(['/home-cliente']);
           }, 2500); 
           break;
+        case 'metre':
+          setTimeout(() => {
+            this.loading = false;
+            this.router.navigate(['/home-metre']);
+          }, 2500); 
       }
     }).catch(response =>{
       

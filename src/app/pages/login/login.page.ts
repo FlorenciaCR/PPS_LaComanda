@@ -61,9 +61,12 @@ export class LoginPage implements OnInit {
 
     this.email = this.form.get('email')?.value;
     this.password = this.form.get('password')?.value;
-
+    console.log(this.email);
+    console.log(this.password);
     for (const user of this.usuarios) {
+      console.log(user);
       if(user.email == this.email){
+        console.log(user);
         this.actualUser = user;
       }
     }

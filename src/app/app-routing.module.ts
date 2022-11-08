@@ -35,25 +35,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home-cliente/home-cliente.module').then( m => m.HomeClientePageModule)
   },
   {
-    path: 'alta-empleado',
-    loadChildren: () => import('./pages/alta-empleado/alta-empleado.module').then( m => m.AltaEmpleadoPageModule)
-
-  },
-  {
     path: 'encuestas',
     loadChildren: () => import('./pages/encuestas/encuestas.module').then( m => m.EncuestasPageModule)
-  },
-  {
-    path: 'pregunta1',
-    loadChildren: () => import('./components/pagesEncuestaEmpleado/pregunta1/pregunta1.module').then( m => m.Pregunta1PageModule)
-  },
-  {
-    path: 'pregunta2',
-    loadChildren: () => import('./components/pagesEncuestaEmpleado/pregunta2/pregunta2.module').then( m => m.Pregunta2PageModule)
-  },
-  {
-    path: 'pregunta3',
-    loadChildren: () => import('./components/pagesEncuestaEmpleado/pregunta3/pregunta3.module').then( m => m.Pregunta3PageModule)
   },
   {
     path: 'pregunta4',
@@ -62,7 +45,12 @@ const routes: Routes = [
   {
     path: 'pregunta5',
     loadChildren: () => import('./components/pagesEncuestaEmpleado/pregunta5/pregunta5.module').then( m => m.Pregunta5PageModule)
+  },
+  {
+    path: 'home-metre',
+    loadChildren: () => import('./pages/home-metre/home-metre.module').then( m => m.HomeMetrePageModule)
   }
+
 ];
 
 

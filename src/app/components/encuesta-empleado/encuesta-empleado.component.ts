@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
@@ -8,6 +8,7 @@ import { FirestoreService } from 'src/app/services/firestore.service';
   templateUrl: './encuesta-empleado.component.html',
   styleUrls: ['./encuesta-empleado.component.scss'],
 })
+
 export class EncuestaEmpleadoComponent implements OnInit {
 
   

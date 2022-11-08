@@ -4,6 +4,7 @@
       class="select">
       <ion-select-option value="dueñoSup">Alta Dueño/Supervisor</ion-select-option>
       <ion-select-option value="deshabilitar">Deshabilitar Cliente</ion-select-option>
+      <ion-select-option value="empleado">Alta empleado</ion-select-option>
     </ion-select>
   </ion-item>
   <div *ngIf="opcionDuenio">
@@ -11,5 +12,8 @@
   </div>
   <div *ngIf="opcionDeshabilitado">
     <app-lista-deshabilitados></app-lista-deshabilitados>
+  </div>
+  <div *ngIf="opcionEmpleado">
+    <app-alta-empleado></app-alta-empleado>
   </div>
 </ion-content>
