@@ -2,6 +2,29 @@
   <img src="../../assets/Spinner.png" style="display: block; position: absolute;margin-top: 50%; z-index: 101;" [ngClass]="{'loading' : this.as.loading}" *ngIf="this.as.loading"/>
   <div style="margin-top: 5%; padding-left: 2%; padding-right: 2%;">
     <form [formGroup]='form' > <!-- (ngSubmit)="this.agregarCliente()" -->
+
+<div align="start" style="margin-left: 5%; margin-top: 5%;">
+<ion-label color="dark" style="font-size: 15px;">Correo</ion-label>         
+</div>
+<ion-item class="items" style="--border-radius: 6px; margin-top: 15px; padding-left: 3%; padding-right: 3%;">       
+  <ion-input color="light" type="email" placeholder="Correo" formControlName='correo' name="correo" required></ion-input>
+</ion-item>
+  <div align="center" style="margin-bottom: 5%;">
+    <small class="invalid" *ngIf="form.controls.correo.errors?.required && form.controls.correo.touched">El correo es requerido</small>
+    <small class="invalid" *ngIf="form.controls.correo.errors?.minlength">El correo es invalido</small>
+  </div>
+
+  <div align="start" style="margin-left: 5%; margin-top: 5%;">
+    <ion-label color="dark" style="font-size: 15px;">Contraseña</ion-label>         
+  </div>
+    <ion-item class="items" style="--border-radius: 6px; margin-top: 15px; padding-left: 3%; padding-right: 3%;">       
+      <ion-input color="light" type="password" placeholder="Contraseña" formControlName='password' name="password" required></ion-input>
+    </ion-item>
+      <div align="center" style="margin-bottom: 5%;">
+        <small class="invalid" *ngIf="form.controls.password.errors?.required && form.controls.password.touched">La contraseña es requerido</small>
+        <small class="invalid" *ngIf="form.controls.password.errors?.minlength">La contraseña es invalido</small>
+      </div>
+
       <div align="start" style="margin-left: 5%; margin-top: 5%;">
         <ion-label color="dark" style="font-size: 15px;">Nombre</ion-label>         
       </div>
@@ -12,7 +35,6 @@
             <small class="invalid" *ngIf="form.controls.nombre.errors?.required && form.controls.nombre.touched">El nombre es requerido</small>
             <small class="invalid" *ngIf="form.controls.nombre.errors?.minlength">El nombre debe tener mínimo 2 caracteres</small>
           </div>
-          
           <div align="start" style="margin-left: 5%; margin-bottom: 5%;">
             <ion-label color="dark" style="font-size: 15px;">Apellido/s</ion-label>        
           </div>
