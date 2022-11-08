@@ -198,7 +198,7 @@ export class HomeClientePage implements OnInit {
       });
   }*/
 
-  escanearQRMesa()
+  /*escanearQRMesa()
   {
     
     this.sf.test().then((data) => {
@@ -206,17 +206,13 @@ export class HomeClientePage implements OnInit {
       this.numeroMesaEscaneada = parseInt(data);
       this.sf.stopScan();
     })
-  }
+  }*/
 
   mostrarMenu()
   {
     let fondo = document.getElementById("1");
 
     this.estadoPedido = false;
-    console.log(this.usuarioPedido);
-    console.log(this.usuarioActual);
-   
-    //this.escanearQRMesa();
 
     this.sf.test().then((data) => {
       
