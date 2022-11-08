@@ -62,7 +62,11 @@ const routes: Routes = [
   {
     path: 'pregunta5',
     loadChildren: () => import('./components/pagesEncuestaEmpleado/pregunta5/pregunta5.module').then( m => m.Pregunta5PageModule)
+  },  {
+    path: 'lista-productos',
+    loadChildren: () => import('./pages/lista-productos/lista-productos.module').then( m => m.ListaProductosPageModule)
   }
+
 ];
 
 
