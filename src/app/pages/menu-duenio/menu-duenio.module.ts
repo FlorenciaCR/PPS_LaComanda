@@ -13,6 +13,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatPseudoCheckboxModule } from '@angular/material/core';
 
 import { ListaDeshabilitadosComponent } from 'src/app/components/lista-deshabilitados/lista-deshabilitados.component';
+import { AltaEmpleadoPage } from 'src/app/components/alta-empleado/alta-empleado.page';
 
 
 @NgModule({
@@ -26,6 +27,6 @@ import { ListaDeshabilitadosComponent } from 'src/app/components/lista-deshabili
     MatPseudoCheckboxModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  declarations: [MenuDuenioPage,AltaDuenioSupComponent,ListaDeshabilitadosComponent]
+  declarations: [MenuDuenioPage,AltaDuenioSupComponent,ListaDeshabilitadosComponent,AltaEmpleadoPage]
 })
 export class MenuDuenioPageModule {}

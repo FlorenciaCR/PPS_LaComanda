@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,CAAC;EACH,YAAY,CAAA,UAAC;EACb,QAAQ,EAAE,QAAQ;CACrB",
-    "sources": [
-        "../pregunta3/pregunta3.page.scss"
-    ],
-    "names": [],
-    "file": "pregunta3.page.css"
-}

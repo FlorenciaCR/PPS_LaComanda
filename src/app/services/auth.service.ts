@@ -54,7 +54,8 @@ export class AuthService {
     this.loading = true;
     this.auth.signInWithEmailAndPassword(email,password).then(() =>
     {
-      this.loggedUser = actualUser;  
+      this.loggedUser = actualUser;
+      console.log(actualUser);  
       switch(this.loggedUser.perfil){
         case 'Dueño':
           setTimeout(() => {
@@ -74,7 +75,7 @@ export class AuthService {
             this.router.navigate(['/home-cliente']);
           }, 2500); 
           break;
-        case 'metre':
+        case 'Metre':
           setTimeout(() => {
             this.loading = false;
             this.router.navigate(['/home-metre']);

@@ -66,11 +66,10 @@ export class LoginPage implements OnInit {
     for (const user of this.usuarios) {
       console.log(user);
       if(user.email == this.email){
-        console.log(user);
         this.actualUser = user;
       }
     }
-    
+
     if(this.actualUser.perfil == 'cliente'){
       if(this.actualUser.habilitado == "si"){
         this.as.login(this.email,this.password,this.actualUser);
