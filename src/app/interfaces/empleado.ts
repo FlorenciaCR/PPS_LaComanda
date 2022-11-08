@@ -1,4 +1,6 @@
 export interface Empleado {
+    correo: string,
+    password: string
     nombre: string,
     apellido: string,
     DNI: number,

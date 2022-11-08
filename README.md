@@ -21,10 +21,21 @@ Encuesta empleado
 Menu Cliente  
 Splash estatico  
 Encuesta cliente
+Pantalla Encuestas
 
 ### Maximiliano Fernandez    
 Push Notification  
 Encuesta supervisor 
+
+# 📌 Tercera semana  
+### Florencia Colodro  
+   
+
+### Lucas Valdiviezo  
+QR de Ingreso al local
+
+### Maximiliano Fernandez    
+
   
    
    
@@ -48,9 +59,9 @@ Fecha de Inicio: 28/10/2022
 Fecha de Final: 28/10/2022   
 Branch: Beta-Valdiviezo
 
-+ 4-Modulo: Qr de ingreso local  
-Fecha de Inicio: A definir  
-Fecha de Final: A definir  
++ 4-Modulo: Qr de ingreso local  ✅   
+Fecha de Inicio: 7/11/2022 
+Fecha de Final: 7/11/2022  
 Branch: Beta-Valdiviezo 
 
 + 5-Modulo: Encuesta de Empleados  ✅  

@@ -54,7 +54,11 @@
       <ion-grid style="display: flex; flex-flow: column;position: center;">
         <ion-row style="flex-grow: 1;">
           <ion-col style=" width: 70%;">
+<<<<<<< HEAD
             <img src="../../assets/icon/Icono.png" style="margin-top: 20%;" [ngClass]="{'loading' : this.loading}"
+=======
+            <img src="../../../assets/Spinner.png" style="margin-top: 20%;" [ngClass]="{'loading' : this.loading}"
+>>>>>>> 95ed34e174af579a32271d89763abed08af9970f
               *ngIf="loading" />
           </ion-col>
         </ion-row>
@@ -89,9 +93,9 @@
       </ion-grid>
     </div>
 
-    <!--div *ngIf="menu" style="height: 100%; width: 100%;">
+    <div *ngIf="menu" style="height: 100%; width: 100%;">
       <app-lista-productos (atrasEvent)="atrasCaptura($event)"></app-lista-productos>
-    </div-->
+    </div>
 
     <div *ngIf="menuOpcionesConfirma || this.usuarioPedido.pagoConfirmado" style="height: 100%;">
       <div style="height: 100%;" align="center">
@@ -238,7 +242,7 @@
     <ion-grid style="display: flex; flex-flow: column;position: center;">
       <ion-row style="flex-grow: 1;">
         <ion-col style=" width: 70%;">
-          <img src="../../assets/Spinner.png" style="margin-top: 20%;" [ngClass]="{'loading' : this.loading}"
+          <img src="../../../assets/Spinner.png" style="margin-top: 20%;" [ngClass]="{'loading' : this.loading}"
             *ngIf="loading" />
         </ion-col>
       </ion-row>

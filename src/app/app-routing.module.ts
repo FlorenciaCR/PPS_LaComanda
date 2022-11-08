@@ -39,20 +39,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/encuestas/encuestas.module').then( m => m.EncuestasPageModule)
   },
   {
-    path: 'pregunta4',
-    loadChildren: () => import('./components/pagesEncuestaEmpleado/pregunta4/pregunta4.module').then( m => m.Pregunta4PageModule)
+    path: 'lista-productos',
+    loadChildren: () => import('./pages/lista-productos/lista-productos.module').then( m => m.ListaProductosPageModule)
   },
-  {
-    path: 'pregunta5',
-    loadChildren: () => import('./components/pagesEncuestaEmpleado/pregunta5/pregunta5.module').then( m => m.Pregunta5PageModule)
-  },
+
   {
     path: 'home-metre',
     loadChildren: () => import('./pages/home-metre/home-metre.module').then( m => m.HomeMetrePageModule)
   }
 
-];
-
+]
 
 
 @NgModule({

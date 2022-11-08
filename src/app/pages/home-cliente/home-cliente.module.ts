@@ -8,6 +8,7 @@ import { HomeClientePageRoutingModule } from './home-cliente-routing.module';
 
 import { HomeClientePage } from './home-cliente.page';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { ListaProductosPage } from '../lista-productos/lista-productos.page';
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
     IonicModule,
     HomeClientePageRoutingModule,
   ],
-  declarations: [HomeClientePage],
+  declarations: [HomeClientePage, ListaProductosPage],
   providers:[AngularFirestore]
 })
 export class HomeClientePageModule {}
