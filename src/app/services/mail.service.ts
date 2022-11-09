@@ -17,7 +17,7 @@ export class MailService {
       message: "Para poder acceder a la aplicación, debe aguardar que su cuenta sea verificada.",
       mail_usuario: usuario.email,
       from_name: environment.appName,
-      date: date.getDate()
+      date: date
     };
     emailjs.send(environment.emailService.serviceID, environment.emailService.templateID, templateParams)
       .then(res =>{
@@ -33,9 +33,9 @@ export class MailService {
     let templateParams = {
       to_name: usuario.nombre,
       message: "Su cuenta ha sido verificada, ya puede ingresar a la aplicación.",
-      mailUsuario: usuario.email,
+      mail_usuario: usuario.email,
       from_name: environment.appName,
-      date: date.getDate()
+      date: date
     };
 
     emailjs.send(environment.emailService.serviceID, environment.emailService.templateID, templateParams)
@@ -52,7 +52,7 @@ export class MailService {
     let templateParams = {
       to_name: usuario.nombre,
       message: "Su cuenta ha sido RECHAZADA, no puede ingresar a la aplicación.",
-      mailUsuario: usuario.email,
+      mail_usuario: usuario.email,
       from_name: environment.appName,
       date: date.getDate()
     };
