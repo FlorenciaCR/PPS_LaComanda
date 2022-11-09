@@ -32,7 +32,8 @@ Encuesta supervisor
    
 
 ### Lucas Valdiviezo  
-QR de Ingreso al local
+QR de Ingreso al local  
+Splash Animado
 
 ### Maximiliano Fernandez    
 
@@ -49,9 +50,9 @@ Fecha de Inicio: 26/10/2022
 Fecha de Final: 26/10/2022  
 Branch: Beta-Valdiviezo  
 
-+ 2-Modulo: Hacer splash dinamico  
-Fecha de Inicio: A definir  
-Fecha de Final: A definir  
++ 2-Modulo: Hacer splash animado ✅    
+Fecha de Inicio: 8/11/2022   
+Fecha de Final: 8/11/2022   
 Branch: Beta-Valdiviezo 
 
 + 3-Modulo: Alta de dueño / supervisor  ✅  
@@ -60,13 +61,13 @@ Fecha de Final: 28/10/2022
 Branch: Beta-Valdiviezo
 
 + 4-Modulo: Qr de ingreso local  ✅   
-Fecha de Inicio: 7/11/2022 
+Fecha de Inicio: 7/11/2022  
 Fecha de Final: 7/11/2022  
 Branch: Beta-Valdiviezo 
 
 + 5-Modulo: Encuesta de Empleados  ✅  
 Fecha de Inicio: 4/11/22  
-Fecha de Final: 4/11/22 
+Fecha de Final: 4/11/22  
 Branch: Beta-Valdiviezo 
 
 + 6-Modulo: Ingresar al local    
