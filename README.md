@@ -28,8 +28,9 @@ Push Notification
 Encuesta supervisor 
 
 # 📌 Tercera semana  
-### Florencia Colodro  
-   
+### Florencia Colodro    
+Envio de main automatico  
+Agregar nuevo cliente registrado   
 
 ### Lucas Valdiviezo  
 QR de Ingreso al local  
@@ -141,9 +142,9 @@ Fecha de Inicio: 4/11/22
 Fecha de Final: 7/11/22   
 Branch: Alfa-Colodro   
 
-+ 5-Modulo: Agregar un nuevo cliente registrado   
++ 5-Modulo: Agregar un nuevo cliente registrado✅     
 Fecha de Inicio: 04/11/2022  
-Fecha de Final: A definir  
+Fecha de Final: 08/11/2022  
 Branch: Alfa-Colodro
 
 + 6-Modulo: Confirmar pedidos  
@@ -151,8 +152,8 @@ Fecha de Inicio: A definir
 Fecha de Final: A definir  
 Branch: Alfa-Colodro
 
-+ 7-Modulo: Envio de mail automatico      
++ 7-Modulo: Envio de mail automatico ✅        
 Fecha de Inicio: 26/10/2022  
-Fecha de Final: A definir  
+Fecha de Final: 08/11/2022    
 Branch: Alfa-Colodro  
 
