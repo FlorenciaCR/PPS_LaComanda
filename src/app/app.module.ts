@@ -15,7 +15,6 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
 import { SplashComponent } from './components/splash/splash.component';
-
 @NgModule({
   declarations: [AppComponent,SplashComponent],
   imports: [
@@ -34,7 +33,7 @@ import { SplashComponent } from './components/splash/splash.component';
     FormsModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },AngularFirestore],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, AngularFirestore],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

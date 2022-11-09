@@ -152,7 +152,7 @@ export class HomeClientePage implements OnInit {
 
   verEncuestas()
   {
-    this.router.navigate(['/encuestas']);
+    this.router.navigate(['/chart-encuesta-clientes']);
   }
 
   esconderEncuestas()

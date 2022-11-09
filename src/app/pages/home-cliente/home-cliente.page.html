@@ -219,20 +219,16 @@
     </ion-grid>
   </div>
 
-  <!--div *ngIf="this.encuesta" style="height: 100%; width: 100%;">
-    <app-encuesta-cliente (volverEvent)="volverAtras($event)"></app-encuesta-cliente>
-  </div>
-
-  <div *ngIf='this.cuenta' style="height: 100%; width: 100%;">
+  <!--div *ngIf='this.cuenta' style="height: 100%; width: 100%;">
     <app-cuenta (pagadoEvent)="pagadoAtras($event)"></app-cuenta>
-  </div>
+  </div-->
 
   <div *ngIf="chat" style="height: 100%; width: 100%;">
     <div>
       <ion-button expand="block" color="dark" (click)="esconderChat()">Volver</ion-button>
     </div>
     <app-chat></app-chat>
-  </div-->
+  </div>
 
   <div *ngIf='this.esperarPago && !this.usuarioPedido.pagoConfirmado' style="background-color: black;">
     <ion-grid style="display: flex; flex-flow: column;position: center;">

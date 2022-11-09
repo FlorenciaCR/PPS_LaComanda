@@ -16,8 +16,8 @@ import { AltaClientePage } from './alta-cliente.page';
     IonicModule,
     AltaClientePageRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  declarations: [AltaClientePage]
+  declarations: [AltaClientePage],
 })
 export class AltaClientePageModule {}

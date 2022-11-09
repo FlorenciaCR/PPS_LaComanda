@@ -46,7 +46,16 @@ const routes: Routes = [
   {
     path: 'home-metre',
     loadChildren: () => import('./pages/home-metre/home-metre.module').then( m => m.HomeMetrePageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./pages/chat/chat.module').then( m => m.ChatPageModule)
+  },
+  {
+    path: 'chart-encuesta-clientes',
+    loadChildren: () => import('./pages/chart-encuesta-clientes/chart-encuesta-clientes.module').then( m => m.ChartEncuestaClientesPageModule)
   }
+
 
 ]
 
