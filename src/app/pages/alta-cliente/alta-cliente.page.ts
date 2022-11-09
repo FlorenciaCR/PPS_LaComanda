@@ -154,8 +154,12 @@ export class AltaClientePage implements OnInit {
   }
 
   
+
   /*sendPush() {
     console.log("asd");
+  sendPush() {
+    console.log("enviando notificacion...");
+
     this.push
       .sendPushNotification({
         // eslint-disable-next-line @typescript-eslint/naming-convention

@@ -11,11 +11,13 @@ export class MailService {
   constructor() { }
 
   enviarAviso(usuario: any){
+    let date = new Date();
     let templateParams = {
       to_name: usuario.nombre,
       message: "Para poder acceder a la aplicación, debe aguardar que su cuenta sea verificada.",
       mail_usuario: usuario.email,
-      from_name: environment.appName
+      from_name: environment.appName,
+      date: date.getDate()
     };
     emailjs.send(environment.emailService.serviceID, environment.emailService.templateID, templateParams)
       .then(res =>{
@@ -27,11 +29,13 @@ export class MailService {
   }
 
   enviarAvisoHabilitado(usuario: any){
+    let date = new Date();
     let templateParams = {
       to_name: usuario.nombre,
       message: "Su cuenta ha sido verificada, ya puede ingresar a la aplicación.",
       mailUsuario: usuario.email,
-      from_name: environment.appName
+      from_name: environment.appName,
+      date: date.getDate()
     };
 
     emailjs.send(environment.emailService.serviceID, environment.emailService.templateID, templateParams)
@@ -44,11 +48,13 @@ export class MailService {
   }
 
   enviarAvisoRechazado(usuario: any){
+    let date = new Date();
     let templateParams = {
       to_name: usuario.nombre,
       message: "Su cuenta ha sido RECHAZADA, no puede ingresar a la aplicación.",
       mailUsuario: usuario.email,
-      from_name: environment.appName
+      from_name: environment.appName,
+      date: date.getDate()
     };
 
     emailjs.send(environment.emailService.serviceID, environment.emailService.templateID, templateParams)
