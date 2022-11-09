@@ -112,8 +112,8 @@ Fecha de Inicio: 28/10/2022
 Fecha de Final: 29/10/2022  
 Branch: Gamma-Fernandez 
 
-+ 7-Modulo: Envio de mail automatico      
-Fecha de Inicio: 26/10/2022  
++ 7-Modulo: Push Notification(Completo)  
+Fecha de Inicio: A definir  
 Fecha de Final: A definir  
 Branch: Gamma-Fernandez 
  
@@ -136,9 +136,9 @@ Fecha de Inicio: A definir
 Fecha de Final: A definir  
 Branch: Alfa-Colodro  
 
-+ 4-Modulo: Encuesta de Cliente  
-Fecha de Inicio: 4/11/22  
-Fecha de Final: A definir  
++ 4-Modulo: Encuesta de Cliente ✅  
+Fecha de Inicio: 4/11/22    
+Fecha de Final: 7/11/22   
 Branch: Alfa-Colodro   
 
 + 5-Modulo: Agregar un nuevo cliente registrado   
@@ -151,9 +151,8 @@ Fecha de Inicio: A definir
 Fecha de Final: A definir  
 Branch: Alfa-Colodro
 
-+ 7-Modulo: Push Notification(Completo)  
-Fecha de Inicio: A definir  
++ 7-Modulo: Envio de mail automatico      
+Fecha de Inicio: 26/10/2022  
 Fecha de Final: A definir  
 Branch: Alfa-Colodro  
-
 
