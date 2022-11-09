@@ -30,7 +30,6 @@ export class ListaDeshabilitadosComponent implements OnInit {
   }
 
   filtarHabilitado(item){
-    console.log(item);
     if(item.habilitado == "no"){
       return true;
     }else{
@@ -40,7 +39,7 @@ export class ListaDeshabilitadosComponent implements OnInit {
 
   habilitar(item : any, accion : boolean){
     let usu : any;
- 
+      console.log(item);
       for (const iterator of this.usuarios) {
         if(iterator.DNI == item.DNI){
           usu = iterator;
