@@ -25,7 +25,7 @@ export class ChatPage implements OnInit {
       date: Date().toString(),
     }
 
-    this.fs.traerUsuarios().subscribe((value) =>{
+    /*this.fs.traerUsuarios().subscribe((value) =>{
       this.usuariosArray = value;
       for (const iterator of this.usuariosArray) 
       {
@@ -35,7 +35,7 @@ export class ChatPage implements OnInit {
           break;
         }
       }
-    })
+    })*/
   }
 
   ngOnInit(){

@@ -94,7 +94,6 @@ export class ListaProductosPage implements OnInit {
     this.loading = true;
     
     setTimeout(() => {
-
       this.fs.agregarPedido(pedido);
       if(this.fs.sonido){
       this.reproducirSonido("audioBueno2");
@@ -105,7 +104,10 @@ export class ListaProductosPage implements OnInit {
       //esconder la lista de productos
       this.atrasEvent.emit(false);
     }, 3000);
+  }
 
+  esconderProductos(){
+    this.atrasEvent.emit(false);
   }
 
   async ErrorToastCarrito() {

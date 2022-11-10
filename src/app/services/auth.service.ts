@@ -80,6 +80,12 @@ export class AuthService {
             this.loading = false;
             this.router.navigate(['/home-metre']);
           }, 2500); 
+        break;
+        case 'Mozo':
+          setTimeout(() => {
+            this.loading = false;
+            this.router.navigate(['/home-mozo']);
+          }, 2500); 
       }
     }).catch(response =>{
       

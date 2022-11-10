@@ -16,6 +16,6 @@ import { ChatMozoPage } from '../chat-mozo/chat-mozo.page';
     IonicModule,
     HomeMozoPageRoutingModule
   ],
-  declarations: [HomeMozoPage,ChatMozoPage]//,ChatMozoPage
+  declarations: [HomeMozoPage,ChatMozoPage]
 })
 export class HomeMozoPageModule {}

@@ -1,14 +1,12 @@
 <ion-content>
-
   <div class="container" style="width: 100%;">
-
     <div class="chat-window" id="chat_window_1" style="margin-left:10px;">
-
+      
       <div style="height: 50%; width: 100%; margin-bottom: 35%;">
-
+        
         <div class="" style="width: 50%;" align="center">
         </div>
-
+        
         <div *ngFor="let item of mensajes | async">
           <div align="end" style="margin-bottom: 10px;" *ngIf='this.fs.usuario.nombre == item.user'>
 
@@ -49,8 +47,7 @@
       </div>
 
       <ion-row
-        style="height: 10%; flex-grow: 1; background-color: transparent; width: 100%; position: fixed; bottom: 0;">
-
+        style="height: 10%; flex-grow: 1; background-color: transparent;bottom:0; width: 100%; position: fixed;">
         <div class="message-box">
           <textarea type="text" class="message-input" [(ngModel)]="mensajeEnviar"
             placeholder="Escribe un mensaje aquí"></textarea>
@@ -59,7 +56,6 @@
             </ion-icon>
           </button>
         </div>
-
       </ion-row>
 
     </div>
