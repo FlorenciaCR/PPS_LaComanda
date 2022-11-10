@@ -54,7 +54,15 @@ const routes: Routes = [
   {
     path: 'chart-encuesta-clientes',
     loadChildren: () => import('./pages/chart-encuesta-clientes/chart-encuesta-clientes.module').then( m => m.ChartEncuestaClientesPageModule)
+  },  {
+    path: 'home-mozo',
+    loadChildren: () => import('./pages/home-mozo/home-mozo.module').then( m => m.HomeMozoPageModule)
+  },
+  {
+    path: 'chat-mozo',
+    loadChildren: () => import('./pages/chat-mozo/chat-mozo.module').then( m => m.ChatMozoPageModule)
   }
+
 
 
 ]
