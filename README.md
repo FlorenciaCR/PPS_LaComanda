@@ -37,7 +37,7 @@ QR de Ingreso al local
 Splash Animado
 
 ### Maximiliano Fernandez    
-
+Realizar pedidos (platos y bebidas) 
   
    
    
@@ -98,9 +98,9 @@ Fecha de Inicio: 4/11/22
 Fecha de Final: 4/11/22 
 Branch: Gamma-Fernandez 
 
-+ 4-Modulo: Realizar pedidos (platos y bebidas)  
-Fecha de Inicio: A definir  
-Fecha de Final: A definir  
++ 4-Modulo: Realizar pedidos (platos y bebidas)  ✅  
+Fecha de Inicio: 7/11/22  
+Fecha de Final: 7/11/22    
 Branch: Gamma-Fernandez  
 
 + 5-Modulo: Splash Estatico   
