@@ -46,11 +46,11 @@ export class HomeClientePage implements OnInit {
     private sf: ScannerService, private toastController: ToastController, private router: Router) {
     //Busco en la coleccion de Lista de espera si esta, sino esta sigo en pantalla esperaAsignacionMesa
     this.escaneoQR = false;
-    this.menu = true;
+    this.menuOpciones = true;
   }
 
   ngOnInit() {
-    this.fs.traerClientes().subscribe((value) => {
+    this.fs.traerUsuarios().subscribe((value) => {
       this.usuariosArray = value;
       for (let item of this.usuariosArray) {
         if (item.email == this.as.loggedUser.email) {
