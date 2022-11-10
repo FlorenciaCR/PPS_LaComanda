@@ -19,7 +19,7 @@ import { ChatPage } from '../chat/chat.page';
     IonicModule,
     HomeClientePageRoutingModule,
   ],
-  declarations: [HomeClientePage, ListaProductosPage,ChatPage],
+  declarations: [HomeClientePage,ChatPage],
   providers:[AngularFirestore]
 })
 export class HomeClientePageModule {}

@@ -1,14 +1,23 @@
 .fondo{
     //--background: transparent !important;
-
-    background-image: url('../../../assets/img/cocina.jpg');    
-    background-repeat: no-repeat;
-	  background-size: 100% 100%;
-    background-position: center;
-    background-attachment: fixed;
     overflow-y: scroll;
     overflow-x: hidden;
+    background-color: #a0dd94;
+    height: 100%;
 }
+
+ion-toolbar {
+    --background: #FD841F;
+    --color: white;
+  
+    --border-color: #a85deb;
+    --border-width: 5px 0;
+    --border-style: solid;
+  
+    --min-height: 80px;
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+  }
 
 .img{
     width: 100px;
