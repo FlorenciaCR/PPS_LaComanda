@@ -97,15 +97,6 @@
       <div style="height: 100%;" align="center">
         <ion-row
           style="flex-grow: 1; height: 30%; background-color: #8D2CE2; margin-left: 3%; margin-right: 3%; margin-bottom: 8%; margin-top: 5%;"
-          *ngIf='this.usuarioPedido != "" && this.usuarioPedido.estado != "pagado" && this.usuarioPedido.estado != "entregado"'>
-          <div style="width: 100%;height: 100%;" (click)="irJuegos()">
-            <h2 style="width: 100%; font-weight: bold; margin-top: 30%;" align="center">
-              ENTRAR A LOS JUEGOS
-            </h2>
-          </div>
-        </ion-row>
-        <ion-row
-          style="flex-grow: 1; height: 30%; background-color: #8D2CE2; margin-left: 3%; margin-right: 3%; margin-bottom: 8%; margin-top: 5%;"
           *ngIf='this.usuarioPedido != "" && this.usuarioPedido.estado == "pagado" && !this.encuestaCargada'>
           <div style="width: 100%;height: 100%;" (click)="mostrarEncuesta()">
             <h2 style="width: 100%;font-weight: bold; margin-top: 30%; color: white;" align="center">
@@ -162,15 +153,6 @@
           <div style="width: 100%;height: 100%;" (click)="hacerPedido()">
             <h2 style="width: 100%; font-weight: bold; margin-top: 45%; color: white;" align="center">
               HACER PEDIDO
-            </h2>
-          </div>
-        </ion-row>
-        <ion-row
-          style="flex-grow: 1; height: 45%; background-color: #8D2CE2; margin-left: 3%; margin-right: 3%; margin-bottom: 8%; margin-top: 5%;"
-          *ngIf='this.usuarioPedido.estado == "entregado"'>
-          <div style="width: 100%;height: 100%;" (click)="irJuegos()">
-            <h2 style="width: 100%; font-weight: bold; margin-top: 45%;" align="center">
-              ENTRAR A LOS JUEGOS
             </h2>
           </div>
         </ion-row>
