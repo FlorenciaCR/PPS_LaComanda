@@ -16,18 +16,18 @@
     <ion-grid style="display: flex;">
       <ion-row style="flex-grow: 2;" class="ion-justify-content-center ion-align-items-center ion-text-center">
         <ion-col *ngFor="let item of this.listaEspera">
-          <ion-card style="background-color: #8D2CE2;">
-              <img class="d-block m-auto img-circle img-responsive img" [src]="item.foto" style="margin-top: 10px;"/>
+          <ion-card style="background-color: #F26E00;">
+              <img class="d-block m-auto img-circle img-responsive img" [src]="item.foto" style="margin-top: 15px;"/>
               <ion-card-header>
                 <ion-card-title style="font-size:20px;">{{item.nombre}}</ion-card-title>
               </ion-card-header>
               <ion-card-content>
                 <ion-item>
                   <ion-label>Mesas</ion-label>
-                  <ion-select interface="popover" color="dark" [(ngModel)]="mesaSeleccionada">
-                    <ion-select-option *ngFor="let mesa of mesasArray" >{{mesa.nroMesa}}</ion-select-option>
+                  <ion-select interface="popover" color="warning" [(ngModel)]="mesaSeleccionada">
+                    <ion-select-option *ngFor="let mesa of mesasArray" >Nro: {{mesa.nroMesa}} - Comensales: {{ mesa.cantComensales}}</ion-select-option>
                   </ion-select>
-                  <ion-button (click)="asignarMesa(item)" mode="md" slot="end" color="dark">Asignar</ion-button>
+                  <ion-button color="warning"  (click)="asignarMesa(item)" mode="md" slot="end">Asignar</ion-button>
                 </ion-item>
               </ion-card-content>
             </ion-card>
