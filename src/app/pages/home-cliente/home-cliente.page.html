@@ -89,9 +89,9 @@
       </ion-grid>
     </div>
 
-    <!--div *ngIf="menu" style="height: 100%; width: 100%;">
+    <div *ngIf="menu" style="height: 100%; width: 100%;">
       <app-lista-productos (atrasEvent)="atrasCaptura($event)"></app-lista-productos>
-    </div-->
+    </div>
 
     <div *ngIf="menuOpcionesConfirma || this.usuarioPedido.pagoConfirmado" style="height: 100%;">
       <div style="height: 100%;" align="center">
@@ -205,10 +205,12 @@
     <app-cuenta (pagadoEvent)="pagadoAtras($event)"></app-cuenta>
   </div-->
 
-  <div *ngIf="chat" style="height: 100%; width: 100%;">
-    <div>
-      <ion-button expand="block" color="dark" (click)="esconderChat()">Volver</ion-button>
-    </div>
+  <div *ngIf="chat">
+    <ion-fab vertical="top" horizontal="end" slot="fixed" (click)="esconderChat()" style="margin-top: 10%;">
+      <ion-fab-button color="primary">
+        <ion-icon name="log-out-outline"></ion-icon>   
+      </ion-fab-button>
+    </ion-fab>
     <app-chat></app-chat>
   </div>
 
