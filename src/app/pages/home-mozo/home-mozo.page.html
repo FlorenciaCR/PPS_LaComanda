@@ -220,12 +220,6 @@
     </ion-item>
     <app-chat-mozo [receptor]="this.emisor"></app-chat-mozo>
   </div>
-  <!-- <div *ngIf="chat" style="height: 100%; width: 100%;">
-    <div>
-      <ion-button expand="block" color="dark" (click)="esconderChat()">Volver</ion-button>
-    </div>
-    <app-chat-mozo [receptor]="this.emisor"></app-chat-mozo>
-  </div>  -->
 
   <ion-fab *ngIf="!chat" horizontal="start" vertical="top" slot="fixed">
     <ion-fab-button color="tertiary" (click)="this.as.logout()">
