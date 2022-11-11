@@ -61,6 +61,10 @@ const routes: Routes = [
   {
     path: 'chat-mozo',
     loadChildren: () => import('./pages/chat-mozo/chat-mozo.module').then( m => m.ChatMozoPageModule)
+  },
+  {
+    path: 'home-cocina',
+    loadChildren: () => import('./pages/home-cocina/home-cocina.module').then( m => m.HomeCocinaPageModule)
   }
 
 
