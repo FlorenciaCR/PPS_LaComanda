@@ -1,9 +1,14 @@
+ion-content{
+  --ion-background-color: #a0dd94;
+  text-align: center;
+}
 .message-box {
 
   width: 95%;
   height: 100%;
   background: #141c22;
   padding: 10px;
+  padding-right: 50px;
   position: fixed;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -13,9 +18,10 @@
   margin-left: auto;
   margin-right: auto;
   bottom: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 2%;
 
   & .message-input {
+    position: relative;
     background: none;
     border: none;
     outline: none !important;
@@ -23,9 +29,9 @@
     // color: rgba(255, 255, 255, .8);//
     font-size: 15px;
     height: 24px;
-    margin: 0;
+    left:0%;
     padding-right: 20px;
-    width: 265px;
+    width: 100%;
     color: #fff;
   }
 

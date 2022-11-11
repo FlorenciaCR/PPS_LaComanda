@@ -46,7 +46,7 @@ export class HomeClientePage implements OnInit {
     private sf: ScannerService, private toastController: ToastController, private router: Router) {
     //Busco en la coleccion de Lista de espera si esta, sino esta sigo en pantalla esperaAsignacionMesa
     this.escaneoQR = false;
-    this.usuarioPedido = "a";
+    this.chat = true;
   }
 
   ngOnInit() {
@@ -260,30 +260,6 @@ export class HomeClientePage implements OnInit {
       this.usuarioPedido = test;
       console.log(this.usuarioPedido);
     }, 500);
-  }
-
-  irJuegos() {
-    this.juegos = true;
-    this.menuOpcionesConfirma = false;
-  }
-
-  mostrarJuego(dato: number) {
-    switch (dato) {
-      case 1:
-        this.tateti = true;
-        this.juegos = false;
-        break;
-
-      case 2:
-        this.ppt = true;
-        this.juegos = false;
-        break;
-
-      case 3:
-        this.aproxima2 = true;
-        this.juegos = false;
-        break;
-    }
   }
 
   mostrarEstadoPedido() {
