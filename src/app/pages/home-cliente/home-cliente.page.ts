@@ -267,11 +267,7 @@ export class HomeClientePage implements OnInit {
   }
 
   mostrarEncuesta() {
-    this.encuesta = true;
-    this.menuOpcionesConfirma = false;
-    this.escaneoQR = false;
-    this.usuarioPedido.pagoConfirmado = false;
-    this.esperarPago = false;
+    this.router.navigate(['/encuestas']);
   }
 
   volverAtras(dato: boolean) {

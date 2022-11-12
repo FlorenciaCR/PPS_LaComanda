@@ -89,7 +89,7 @@ export class LoginPage implements OnInit {
   cargarDatos(dato: number) {
     switch (dato) {
       case 1:
-        this.email = "mozo@mozo.com";
+        this.email = "mailinventado@gmail.com";
         this.password = "123456";
         this.form.get('email')?.setValue(this.email);
         this.form.get('password')?.setValue(this.password);

@@ -3,14 +3,9 @@
   [ngClass]="{'loading' : this.as.loading}" *ngIf="this.as.loading"/> 
 
   <div class="ion-page" id="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-        <ion-title>Lista de Espera</ion-title>
-      </ion-toolbar>
-    </ion-header>
+        <div class="contTitulo">
+          <label>Lista de Espera</label>
+        </div>
   </div>
   <div class="container" style="margin-top: 4rem; padding-left: 2%; padding-right: 2%;">
     <ion-grid style="display: flex;">
@@ -36,7 +31,7 @@
     </ion-grid>
   </div>
   <ion-fab horizontal="end" vertical="bottom" slot="fixed">
-    <ion-fab-button color="naranja" (click)="this.as.logout()">
+    <ion-fab-button color="danger" (click)="this.as.logout()">
       <ion-icon name="log-out-outline"></ion-icon>           
     </ion-fab-button>
   </ion-fab>
