@@ -133,9 +133,9 @@ Fecha de Inicio: 28/10/2022
 Fecha de Final: 29/10/2022  
 Branch: Alfa-Colodro  
 
-+ 3-Modulo: Qr de la Mesa  
-Fecha de Inicio: A definir  
-Fecha de Final: A definir  
++ 3-Modulo: Qr de la Mesa ✅    
+Fecha de Inicio: 11/11/2022  
+Fecha de Final: 11/11/2022  
 Branch: Alfa-Colodro  
 
 + 4-Modulo: Encuesta de Cliente ✅  
