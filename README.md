@@ -149,7 +149,7 @@ Fecha de Inicio: 04/11/2022
 Fecha de Final: 08/11/2022  
 Branch: Alfa-Colodro
 
-+ 6-Modulo: Confirmar pedidos  
++ 6-Modulo: Confirmar pedidos ✅    
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
 Branch: Alfa-Colodro
