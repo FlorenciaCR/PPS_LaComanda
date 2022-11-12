@@ -45,8 +45,7 @@ export class HomeClientePage implements OnInit {
   constructor(private as: AuthService, private fs: FirestoreService/*, private push : PushService*/,
     private sf: ScannerService, private toastController: ToastController, private router: Router) {
     //Busco en la coleccion de Lista de espera si esta, sino esta sigo en pantalla esperaAsignacionMesa
-    this.escaneoQR = false;
-    this.chat = true;
+    this.escaneoQR = true;
   }
 
   ngOnInit() {
@@ -70,7 +69,6 @@ export class HomeClientePage implements OnInit {
       for (const iterator of this.pedidoArray) {
         console.log(iterator.usuario.nombre);
         if (iterator.usuario.nombre == this.as.loggedUser.nombre) {
-          console.log("pedidos");
           this.usuarioPedido = iterator;
 
           if (iterator.estado == "pagado") {

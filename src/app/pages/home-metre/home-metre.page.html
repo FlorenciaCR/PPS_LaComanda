@@ -25,7 +25,7 @@
                 <ion-item>
                   <ion-label>Mesas</ion-label>
                   <ion-select interface="popover" color="warning" [(ngModel)]="mesaSeleccionada">
-                    <ion-select-option *ngFor="let mesa of mesasArray" >Nro: {{mesa.nroMesa}} - Comensales: {{ mesa.cantComensales}}</ion-select-option>
+                    <ion-select-option *ngFor="let mesa of mesasArray" >{{mesa.nroMesa}}</ion-select-option>
                   </ion-select>
                   <ion-button color="warning"  (click)="asignarMesa(item)" mode="md" slot="end">Asignar</ion-button>
                 </ion-item>

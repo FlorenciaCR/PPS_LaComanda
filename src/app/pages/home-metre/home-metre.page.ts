@@ -58,8 +58,6 @@ export class HomeMetrePage implements OnInit {
 
   asignarMesa(usuario : any)
   {
-    console.log(this.mesaSeleccionada);
-    console.log(usuario);
     let usuarioAModificar : any;
     let mesaAModificar : any;
     for (let item of this.usuariosArray) 
@@ -79,7 +77,7 @@ export class HomeMetrePage implements OnInit {
         break;
       }
     }
-    
+    console.log(mesaAModificar);
     mesaAModificar.ocupada = true;
     usuarioAModificar.mesa = this.mesaSeleccionada;
     this.fs.modificarMesa(mesaAModificar,mesaAModificar.id);
