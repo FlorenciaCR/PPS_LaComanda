@@ -18,6 +18,8 @@ export class ListaProductosPage implements OnInit {
   @Output() atrasEvent = new EventEmitter<boolean>();
 
   loading : boolean = false;
+  productExist:boolean = false;
+  position:number;
 
   carrito : any = [];
   precioCarrito : number = 0;
@@ -54,11 +56,25 @@ export class ListaProductosPage implements OnInit {
 
   cargarCarrito(item : any){
     if(!item.cantidad){
-      item.cantidad = 0;
+      
     }
     if(this.carrito.length < 4){
-      this.carrito.push(item);
-      item.cantidad++;
+
+      for(let i=0;i<this.carrito.length;i++){
+        if(item.idField == this.carrito[i].idField){
+          this.productExist = true;
+          this.position = i;
+          break;
+        }
+      };
+
+      if(this.productExist){
+        this.carrito[this.position].cantidad++;
+      }else{
+        item.cantidad = 0;
+        this.carrito.push(item);
+      }
+
       this.tiempoEstimado += parseInt(item.tiempoPromedio);
       this.precioCarrito += parseInt(item.precio);
     }else{
