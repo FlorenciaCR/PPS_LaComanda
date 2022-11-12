@@ -10,6 +10,7 @@ import { HomeClientePage } from './home-cliente.page';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ListaProductosPage } from '../lista-productos/lista-productos.page';
 import { ChatPage } from '../chat/chat.page';
+import { CuentaPage } from '../cuenta/cuenta.page';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { ChatPage } from '../chat/chat.page';
     IonicModule,
     HomeClientePageRoutingModule,
   ],
-  declarations: [HomeClientePage,ChatPage,ListaProductosPage],
+  declarations: [HomeClientePage,ChatPage,ListaProductosPage,CuentaPage],
   providers:[AngularFirestore]
 })
 export class HomeClientePageModule {}

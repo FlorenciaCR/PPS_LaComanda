@@ -15,6 +15,6 @@ import { CuentaPage } from './cuenta.page';
     IonicModule,
     CuentaPageRoutingModule
   ],
-  declarations: [CuentaPage]
+  declarations: []
 })
 export class CuentaPageModule {}
