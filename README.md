@@ -40,7 +40,7 @@ Splash Animado
 Ingresar al local  
 
 ### Maximiliano Fernandez    
-Realizar pedidos (platos y bebidas) 
+Realizar pedidos (platos y bebidas)   
 Qr de propina  
    
    
