@@ -34,7 +34,8 @@ Agregar nuevo cliente registrado
 
 ### Lucas Valdiviezo  
 QR de Ingreso al local  
-Splash Animado
+Splash Animado  
+Ingresar al local  
 
 ### Maximiliano Fernandez    
 Realizar pedidos (platos y bebidas) 
@@ -71,9 +72,9 @@ Fecha de Inicio: 4/11/22
 Fecha de Final: 4/11/22  
 Branch: Beta-Valdiviezo 
 
-+ 6-Modulo: Ingresar al local    
++ 6-Modulo: Ingresar al local  ✅  
 Fecha de Inicio: 03/11/2022  
-Fecha de Final: A definir  
+Fecha de Final: 11/11/2022 
 Branch: Beta-Valdiviezo 
 
 + 7-Modulo: Creacion de la imagen del Splash Estatico ✅   
