@@ -32,6 +32,7 @@ Encuesta supervisor
 Envio de main automatico  
 Agregar nuevo cliente registrado   
 Qr de la Mesa  
+Confirmar pedidos  
 
 ### Lucas Valdiviezo  
 QR de Ingreso al local  
@@ -40,7 +41,7 @@ Ingresar al local
 
 ### Maximiliano Fernandez    
 Realizar pedidos (platos y bebidas) 
-  
+Qr de propina  
    
    
    
@@ -90,9 +91,9 @@ Fecha de Inicio: 31/10/2022
 Fecha de Final: 31/10/2022  
 Branch: Gamma-Fernandez  
  
-+ 2-Modulo: Qr de propina  
-Fecha de Inicio: A definir  
-Fecha de Final: A definir  
++ 2-Modulo: Qr de propina ✅  
+Fecha de Inicio: 10/11/2022  
+Fecha de Final: 12/11/2022  
 Branch: Gamma-Fernandez  
 
 + 3-Modulo: Encuesta de Surpervisor ✅     
@@ -115,7 +116,7 @@ Fecha de Inicio: 28/10/2022
 Fecha de Final: 29/10/2022  
 Branch: Gamma-Fernandez 
 
-+ 7-Modulo: Push Notification(Completo)  
++ 7-Modulo: Push Notification(Completo)    
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
 Branch: Gamma-Fernandez 
@@ -144,14 +145,14 @@ Fecha de Inicio: 4/11/22
 Fecha de Final: 7/11/22   
 Branch: Alfa-Colodro   
 
-+ 5-Modulo: Agregar un nuevo cliente registrado✅     
++ 5-Modulo: Agregar un nuevo cliente registrado ✅     
 Fecha de Inicio: 04/11/2022  
 Fecha de Final: 08/11/2022  
 Branch: Alfa-Colodro
 
 + 6-Modulo: Confirmar pedidos ✅    
-Fecha de Inicio: A definir  
-Fecha de Final: A definir  
+Fecha de Inicio: 11/11/2022  
+Fecha de Final: 12/11/2022  
 Branch: Alfa-Colodro
 
 + 7-Modulo: Envio de mail automatico ✅        
