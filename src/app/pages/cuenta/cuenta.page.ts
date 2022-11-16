@@ -100,20 +100,20 @@ export class CuentaPage implements OnInit {
       this.propina = value;
 
       switch (this.propina) {
-        case 'Excelente':
+        case '@Excelente':
           this.precioTotal = this.pedidoElegido.precioTotal * 0.2 + this.pedidoElegido.precioTotal;
           this.precioPropina = this.pedidoElegido.precioTotal * 0.2;
           this.propinaporc = 20;
           break;
-        case 'MuyBueno':
+        case '@MuyBueno':
           this.precioTotal = this.pedidoElegido.precioTotal * 0.15 + this.pedidoElegido.precioTotal;
           this.propinaporc = 15;
           break;
-        case 'Bueno':
+        case '@Bueno':
           this.precioTotal = this.pedidoElegido.precioTotal * 0.1 + this.pedidoElegido.precioTotal;
           this.propinaporc = 10;
           break;
-        case 'Regular':
+        case '@Regular':
           this.precioTotal = this.pedidoElegido.precioTotal * 0.05 + this.pedidoElegido.precioTotal;
           this.propinaporc = 5;
           break;

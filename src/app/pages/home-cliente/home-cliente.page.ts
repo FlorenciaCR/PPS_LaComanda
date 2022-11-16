@@ -41,20 +41,21 @@ export class HomeClientePage implements OnInit {
   esperarPago: boolean = false;
   variableNormal: boolean = true;
 
-  constructor(private as: AuthService, private fs: FirestoreService/*, private push : PushService*/,
+  constructor(private as: AuthService, private fs: FirestoreService, private push : PushService,
     private sf: ScannerService, private toastController: ToastController, private router: Router) {
     //Busco en la coleccion de Lista de espera si esta, sino esta sigo en pantalla esperaAsignacionMesa
-    this.escaneoQR = true;
-
+    this.escaneoQR = false;
+    this.menuOpciones = true;
   }
 
   ngOnInit() {
     this.fs.traerUsuarios().subscribe((value) => {
       this.usuariosArray = value;
       for (let item of this.usuariosArray) {
-        if (item.email == this.as.loggedUser.email) {
+        if (item.nombre == this.as.loggedUser.nombre) {
           this.usuarioActual = item;
           if (this.usuarioActual.mesa != 0) {
+            console.log("TIENE MESA");
             this.mesa = true;
             this.variableNormal = false;
           }
@@ -153,10 +154,9 @@ export class HomeClientePage implements OnInit {
     this.menuOpciones = false;
     this.loading = true;
     this.variableNormal = true;
-    console.log(this.usuarioActual);
   }
 
-  /*sendPushMetre() 
+  sendPushMetre() 
   {
     this.push
       .sendPushNotification({
@@ -173,17 +173,7 @@ export class HomeClientePage implements OnInit {
       .subscribe((data) => {
         console.log(data);
       });
-  }*/
-
-  /*escanearQRMesa()
-  {
-    
-    this.sf.test().then((data) => {
-      
-      this.numeroMesaEscaneada = parseInt(data);
-      this.sf.stopScan();
-    })
-  }*/
+  }
 
   mostrarMenu() {
     let fondo = document.getElementById("1");

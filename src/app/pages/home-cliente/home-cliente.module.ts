@@ -12,6 +12,9 @@ import { ListaProductosPage } from '../lista-productos/lista-productos.page';
 import { ChatPage } from '../chat/chat.page';
 import { CuentaPage } from '../cuenta/cuenta.page';
 import { EncuestaClienteComponent } from 'src/app/components/encuesta-cliente/encuesta-cliente.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 
 
 @NgModule({
@@ -20,6 +23,9 @@ import { EncuestaClienteComponent } from 'src/app/components/encuesta-cliente/en
     FormsModule,
     IonicModule,
     HomeClientePageRoutingModule,
+    MatMenuModule,
+    MatCheckboxModule,
+    MatRadioModule,
   ],
   declarations: [HomeClientePage,ChatPage,ListaProductosPage,CuentaPage,EncuestaClienteComponent],
   providers:[AngularFirestore]
