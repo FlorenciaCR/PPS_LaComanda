@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
+import { PushService } from 'src/app/services/push.service';
 
 @Component({
   selector: 'app-home-mozo',
@@ -34,7 +35,7 @@ export class HomeMozoPage implements OnInit {
     private fs : FirestoreService, 
     private toast : ToastController,
     public as : AuthService,
-    //private push : PushService
+    private push : PushService
   ){ 
     this.loading = true;
 
@@ -146,50 +147,50 @@ export class HomeMozoPage implements OnInit {
     }
               
     this.fs.modificarEstadoPedido(item, item.id); 
-    //this.sendPushConfirmaPedido();
+    this.sendPushConfirmaPedido();
     if(this.fs.sonido){
     this.reproducirSonido("audioBueno2");
     }
     this.SuccessToastPedidoConfirmado();
   }
   
-  // sendPushConfirmaPedido() 
-  // {
-  //   this.push
-  //     .sendPushNotification({
-  //       // eslint-disable-next-line @typescript-eslint/naming-convention
-  //       registration_ids: [
-  //         // eslint-disable-next-line max-len
-  //         'dAlQVdRsThOgHtF1itYfxm:APA91bGyHgCrz8SL_n1b7tnqMuyKPALq3018zuaB1k6C-ZpD9P5AQ8Tq9OepQybBDbRAHMbPONUJXcAPPsVxbvqdb87d3Jg2r5kE_pZ3FlqbiP1igeKSSzVa0lA8O05VimNtDhAmCaN0',
-  //       ],
-  //       notification: {
-  //         title: 'Nuevo pedido.',
-  //         body: 'Hay un nuevo pedido para realizar.',
-  //       },
-  //     })
-  //     .subscribe((data) => {
-  //       console.log(data);
-  //     });
-  // }
+  sendPushConfirmaPedido() 
+  {
+    this.push
+      .sendPushNotification({
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        registration_ids: [
+          // eslint-disable-next-line max-len
+          'dAlQVdRsThOgHtF1itYfxm:APA91bGyHgCrz8SL_n1b7tnqMuyKPALq3018zuaB1k6C-ZpD9P5AQ8Tq9OepQybBDbRAHMbPONUJXcAPPsVxbvqdb87d3Jg2r5kE_pZ3FlqbiP1igeKSSzVa0lA8O05VimNtDhAmCaN0',
+        ],
+        notification: {
+          title: 'Nuevo pedido.',
+          body: 'Hay un nuevo pedido para realizar.',
+        },
+      })
+      .subscribe((data) => {
+        console.log(data);
+      });
+  }
 
-  // sendPushPedidoTerminado() 
-  // {
-  //   this.push
-  //     .sendPushNotification({
-  //       // eslint-disable-next-line @typescript-eslint/naming-convention
-  //       registration_ids: [
-  //         // eslint-disable-next-line max-len
-  //         'ddAwLdvvRW2BCWGeF41CL2:APA91bH3zxdbwwdDlD4n1qCrZhjrZwigEGyZs1qPrBpTUcroteMgl9snhP57Eth46tUXCq2iFPiooFFs4QsBmMLwUpxoiUJ6qWARc94XGUPa9jJZHdY7__-TMoDCN81CL4Tf5ybeM5Xb',
-  //       ],
-  //       notification: {
-  //         title: 'Pedido Finalizado.',
-  //         body: 'Hay un pedido listo para ser entregado.',
-  //       },
-  //     })
-  //     .subscribe((data) => {
-  //       console.log(data);
-  //     });
-  // }
+  sendPushPedidoTerminado() 
+  {
+    this.push
+      .sendPushNotification({
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        registration_ids: [
+          // eslint-disable-next-line max-len
+          'ddAwLdvvRW2BCWGeF41CL2:APA91bH3zxdbwwdDlD4n1qCrZhjrZwigEGyZs1qPrBpTUcroteMgl9snhP57Eth46tUXCq2iFPiooFFs4QsBmMLwUpxoiUJ6qWARc94XGUPa9jJZHdY7__-TMoDCN81CL4Tf5ybeM5Xb',
+        ],
+        notification: {
+          title: 'Pedido Finalizado.',
+          body: 'Hay un pedido listo para ser entregado.',
+        },
+      })
+      .subscribe((data) => {
+        console.log(data);
+      });
+  }
 
   onVerPedidosEnPreparacion(){
 
@@ -223,7 +224,7 @@ export class HomeMozoPage implements OnInit {
     if(item.estado == "en preparacion"){
       this.DangerToastPedidoEnPreparacion();
     }else if(item.estado == "terminado"){
-      //this.sendPushPedidoTerminado();
+        this.sendPushPedidoTerminado();
         item.estado = "entregado";
                
         this.fs.modificarEstadoPedido(item, item.id);
