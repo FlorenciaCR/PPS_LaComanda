@@ -42,7 +42,7 @@ export class HomeClientePage implements OnInit {
   esperarPago: boolean = false;
   variableNormal: boolean = true;
 
-  constructor(private as: AuthService, private fs: FirestoreService, private push : PushService,
+  constructor(private as: AuthService, private fs: FirestoreService/*, private push : PushService*/,
     private sf: ScannerService, private toastController: ToastController, private router: Router) {
     //Busco en la coleccion de Lista de espera si esta, sino esta sigo en pantalla esperaAsignacionMesa
     this.escaneoQR = true;
@@ -152,14 +152,14 @@ export class HomeClientePage implements OnInit {
 
   entrarListaEspera() {
     this.fs.agregarAListaDeEspera(this.as.loggedUser);
-    //this.sendPushMetre();
+    this.sendPushMetre();
     this.menuOpciones = false;
     this.loading = true;
     this.variableNormal = true;
     console.log(this.usuarioActual);
   }
 
-  sendPushMetre() 
+  /*sendPushMetre() 
   {
     this.push
       .sendPushNotification({
@@ -176,9 +176,9 @@ export class HomeClientePage implements OnInit {
       .subscribe((data) => {
         console.log(data);
       });
-  }
+  }*/
 
-  escanearQRMesa()
+  /*escanearQRMesa()
   {
     
     this.sf.test().then((data) => {
@@ -186,7 +186,7 @@ export class HomeClientePage implements OnInit {
       this.numeroMesaEscaneada = parseInt(data);
       this.sf.stopScan();
     })
-  }
+  }*/
 
   mostrarMenu() {
     let fondo = document.getElementById("1");

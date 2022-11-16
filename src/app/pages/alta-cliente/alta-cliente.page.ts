@@ -7,6 +7,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
 import { ImagenesService } from 'src/app/services/imagenes.service';
 import { MailService } from 'src/app/services/mail.service';
+import { PushService } from 'src/app/services/push.service';
 //import { PushService } from 'src/app/services/push.service';
 import { ScannerService } from 'src/app/services/scanner.service';
 
@@ -27,7 +28,8 @@ export class AltaClientePage implements OnInit {
   fotoSubida : boolean = false;
   webPath : string = "";
 
-  constructor(private formBuilder : FormBuilder, public fs : FirestoreService, public as : AuthService, private router : Router,private sf : ScannerService, private imageStore : ImagenesService, private MS : MailService, /*private push : PushService*/) 
+  constructor(private formBuilder : FormBuilder, public fs : FirestoreService, public as : AuthService, private router : Router,private sf : ScannerService, 
+    private imageStore : ImagenesService, private MS : MailService, private push : PushService) 
   { 
   
     this.form = this.formBuilder.group({
@@ -49,7 +51,7 @@ export class AltaClientePage implements OnInit {
        
     this.fs.usuario = this.cliente;
     this.fs.agregarCliente(this.cliente);
-    //this.sendPush();
+    this.sendPush();
     let usuario ={
       email: this.cliente.email,
       clave: this.cliente.clave
@@ -154,9 +156,6 @@ export class AltaClientePage implements OnInit {
   }
 
   
-
-  /*sendPush() {
-    console.log("asd");
   sendPush() {
     console.log("enviando notificacion...");
 
@@ -175,7 +174,7 @@ export class AltaClientePage implements OnInit {
       .subscribe((data) => {
         console.log(data);
       });
-  }*/
+  }
 
   reproducirSonido(dato : string)
   {

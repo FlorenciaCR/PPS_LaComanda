@@ -15,6 +15,9 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
 import { SplashComponent } from './components/splash/splash.component';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent,SplashComponent],
   imports: [
@@ -24,6 +27,8 @@ import { SplashComponent } from './components/splash/splash.component';
     BrowserAnimationsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    provideFirestore(() => getFirestore()),
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     AngularFirestoreModule,
     ReactiveFormsModule,
     MatSlideToggleModule,
@@ -31,6 +36,7 @@ import { SplashComponent } from './components/splash/splash.component';
     MatCheckboxModule,
     MatMenuModule,
     FormsModule,
+    HttpClientModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, AngularFirestore],
