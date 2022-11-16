@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { ChatService } from 'src/app/services/chat.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
+import { PushService } from 'src/app/services/push.service';
 
 @Component({
   selector: 'app-chat',
@@ -16,7 +17,7 @@ export class ChatPage implements OnInit {
   usuariosArray : any = [];
   usuarioActual : any;
 
-  constructor(private chat:ChatService,public as : AuthService, public fs : FirestoreService, /*public push : PushService*/) { 
+  constructor(private chat:ChatService,public as : AuthService, public fs : FirestoreService, public push : PushService) { 
     this.mensajes = chat.items;
     console.log(this.mensajes);
     this.mensaje = {
@@ -67,7 +68,7 @@ export class ChatPage implements OnInit {
 
   }
 
-  /*sendPushMensaje() 
+  sendPushMensaje() 
   {
     this.push
       .sendPushNotification({
@@ -84,6 +85,6 @@ export class ChatPage implements OnInit {
       .subscribe((data) => {
         console.log(data);
       });
-  }*/
+  }
 
 }

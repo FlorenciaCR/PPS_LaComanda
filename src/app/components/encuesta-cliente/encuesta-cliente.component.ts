@@ -4,6 +4,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 import { ToastController } from '@ionic/angular';
+import { PushService } from 'src/app/services/push.service';
 
 @Component({
   selector: 'app-encuesta-cliente',
@@ -31,7 +32,7 @@ export class EncuestaClienteComponent implements OnInit {
 
   posibleAgregar : boolean = false;
 
-  constructor(public as : AuthService, private fs : FirestoreService, private toastController : ToastController) 
+  constructor(public as : AuthService, private fs : FirestoreService, private toastController : ToastController,private push : PushService) 
   {
    
   }
