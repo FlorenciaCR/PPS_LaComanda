@@ -23,7 +23,8 @@ export class PushService {
 
   private user;
 
-  constructor(public fs: FirestoreService, private authS: AuthService, private router: Router,private platform: Platform, private firestore: Firestore, private http: HttpClient) {
+  constructor(public fs: FirestoreService, private authS: AuthService, private router: Router,private platform: Platform, 
+    private firestore: Firestore, private http: HttpClient) {
     
   }
   

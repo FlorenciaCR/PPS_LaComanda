@@ -150,9 +150,9 @@
           </div>
         </ion-row>
         <ion-row style="flex-grow: 1; height: 45%; background-color: #8D2CE2; margin-left: 3%; margin-right: 3%;"
-          *ngIf="this.usuarioPedido == ''">
+          *ngIf="this.usuarioPedido == ''" >
           <div style="width: 100%;height: 100%;" (click)="hacerPedido()">
-            <h2 style="width: 100%; font-weight: bold; margin-top: 45%; color: white;" align="center">
+            <h2 style="width: 100%; font-weight: bold; margin-top: 50%; color: white;" align="center">
               HACER PEDIDO
             </h2>
           </div>
@@ -200,6 +200,10 @@
         </ion-row>
       </ion-grid>
     </div>
+    
+    <div *ngIf="this.encuesta" style="height: 100%; width: 100%;">
+      <app-encuesta-cliente (volverEvent)="volverAtras($event)"></app-encuesta-cliente>
+    </div> 
 
     <div *ngIf='this.cuenta' style="height: 100%; width: 100%;">
     <app-cuenta (pagadoEvent)="pagadoAtras($event)"></app-cuenta>

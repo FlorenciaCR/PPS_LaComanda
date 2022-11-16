@@ -34,7 +34,6 @@ export class HomeClientePage implements OnInit {
   ppt: boolean = false;
   aproxima2: boolean = false;
   estadoPedido: boolean = false;
-  juegos: boolean = false;
   encuesta: boolean = false;
   todasEncuestas: boolean = false;
   cuenta: boolean = false;
@@ -47,6 +46,7 @@ export class HomeClientePage implements OnInit {
     private sf: ScannerService, private toastController: ToastController, private router: Router) {
     //Busco en la coleccion de Lista de espera si esta, sino esta sigo en pantalla esperaAsignacionMesa
     this.escaneoQR = true;
+
   }
 
   ngOnInit() {
@@ -68,7 +68,6 @@ export class HomeClientePage implements OnInit {
       this.pedido = value;
       this.cargarArray();
       for (const iterator of this.pedidoArray) {
-        console.log(iterator.usuario.nombre);
         if (iterator.usuario.nombre == this.as.loggedUser.nombre) {
           this.usuarioPedido = iterator;
 
@@ -76,8 +75,6 @@ export class HomeClientePage implements OnInit {
             this.cuenta = false;
           }
           else {
-            console.log("iterator.pagoConfirmado");
-            console.log(iterator.pagoConfirmado);
             if (iterator.pagoConfirmado) {
               this.esperarPago = false;
             }
@@ -258,7 +255,11 @@ export class HomeClientePage implements OnInit {
   }
 
   mostrarEncuesta() {
-    this.router.navigate(['/encuestas']);
+    this.encuesta = true;
+    this.menuOpcionesConfirma = false;
+    this.escaneoQR = false;
+    this.usuarioPedido.pagoConfirmado = false;
+    this.esperarPago = false;
   }
 
   volverAtras(dato: boolean) {

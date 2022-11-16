@@ -216,17 +216,8 @@ export class FirestoreService {
     return this.angularF.collection('consultas').doc(id_objeto).delete();
   }
 
-  agregarAListaDeEspera(user: any) {
-    this.clientes.subscribe(res => {
-      res.forEach(cliente => {
-        if (user.email == cliente.email) {
-          this.usuario = cliente;
-        }
-      });
-      if (this.usuario != null) {
-        this.listaEsperaCollectionReference.add({ ...this.usuario });
-      }
-    });
+  agregarAListaDeEspera(user: any) {  
+    this.listaEsperaCollectionReference.add({ ...this.usuario });
   }
 
   agregarEmpleado(empleado: any) {
@@ -243,8 +234,6 @@ export class FirestoreService {
   }
 
   agregarDuenSup(duenSup: any) {
-    console.log("asdadas");
-    console.log(duenSup);
     this.duenSupCollectionReference.add({ ...duenSup });
     this.usuariosCollectionReference.add({ ...duenSup });
   }

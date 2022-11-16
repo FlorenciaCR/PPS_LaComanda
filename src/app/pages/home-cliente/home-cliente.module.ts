@@ -11,6 +11,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ListaProductosPage } from '../lista-productos/lista-productos.page';
 import { ChatPage } from '../chat/chat.page';
 import { CuentaPage } from '../cuenta/cuenta.page';
+import { EncuestaClienteComponent } from 'src/app/components/encuesta-cliente/encuesta-cliente.component';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { CuentaPage } from '../cuenta/cuenta.page';
     IonicModule,
     HomeClientePageRoutingModule,
   ],
-  declarations: [HomeClientePage,ChatPage,ListaProductosPage,CuentaPage],
+  declarations: [HomeClientePage,ChatPage,ListaProductosPage,CuentaPage,EncuestaClienteComponent],
   providers:[AngularFirestore]
 })
 export class HomeClientePageModule {}
