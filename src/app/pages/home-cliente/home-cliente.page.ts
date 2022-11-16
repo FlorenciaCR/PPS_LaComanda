@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
+import { PushService } from 'src/app/services/push.service';
 //import { PushService } from 'src/app/services/push.service';
 import { ScannerService } from 'src/app/services/scanner.service';
 
@@ -42,7 +43,7 @@ export class HomeClientePage implements OnInit {
   esperarPago: boolean = false;
   variableNormal: boolean = true;
 
-  constructor(private as: AuthService, private fs: FirestoreService/*, private push : PushService*/,
+  constructor(private as: AuthService, private fs: FirestoreService, private push : PushService,
     private sf: ScannerService, private toastController: ToastController, private router: Router) {
     //Busco en la coleccion de Lista de espera si esta, sino esta sigo en pantalla esperaAsignacionMesa
     this.escaneoQR = true;
@@ -152,14 +153,14 @@ export class HomeClientePage implements OnInit {
 
   entrarListaEspera() {
     this.fs.agregarAListaDeEspera(this.as.loggedUser);
-    //this.sendPushMetre();
+    this.sendPushMetre();
     this.menuOpciones = false;
     this.loading = true;
     this.variableNormal = true;
     console.log(this.usuarioActual);
   }
 
-  /*sendPushMetre() 
+  sendPushMetre() 
   {
     this.push
       .sendPushNotification({
@@ -176,17 +177,7 @@ export class HomeClientePage implements OnInit {
       .subscribe((data) => {
         console.log(data);
       });
-  }*/
-
-  /*escanearQRMesa()
-  {
-    
-    this.sf.test().then((data) => {
-      
-      this.numeroMesaEscaneada = parseInt(data);
-      this.sf.stopScan();
-    })
-  }*/
+  }
 
   mostrarMenu() {
     let fondo = document.getElementById("1");

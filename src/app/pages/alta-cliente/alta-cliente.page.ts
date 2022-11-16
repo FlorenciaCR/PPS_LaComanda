@@ -51,7 +51,7 @@ export class AltaClientePage implements OnInit {
        
     this.fs.usuario = this.cliente;
     this.fs.agregarCliente(this.cliente);
-    //this.sendPush();
+    this.sendPush();
     let usuario ={
       email: this.cliente.email,
       clave: this.cliente.clave
@@ -156,9 +156,6 @@ export class AltaClientePage implements OnInit {
   }
 
   
-
-  /*sendPush() {
-    console.log("asd");
   sendPush() {
     console.log("enviando notificacion...");
 
@@ -177,7 +174,7 @@ export class AltaClientePage implements OnInit {
       .subscribe((data) => {
         console.log(data);
       });
-  }*/
+  }
 
   reproducirSonido(dato : string)
   {
