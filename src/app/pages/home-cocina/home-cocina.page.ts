@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
+import { PushService } from 'src/app/services/push.service';
 
 
 @Component({
@@ -19,10 +20,11 @@ export class HomeCocinaPage implements OnInit {
   constructor(
     private fs : FirestoreService, 
     private toast : ToastController,
-    public as : AuthService
+    public as : AuthService,
+    public push:PushService
   ){
     this.loading = true;
-
+    this.push.getUser()
     this.fs.traerPedidos().subscribe(value => {
       this.pedidosEnPreparacionArray = [];
       this.pedidosEnPreparacion = value;
