@@ -69,6 +69,10 @@ const routes: Routes = [
   {
     path: 'home-bartender',
     loadChildren: () => import('./pages/home-bartender/home-bartender.module').then( m => m.HomeBartenderPageModule)
+  },
+  {
+    path: 'chart-encuesta-supervisor',
+    loadChildren: () => import('./pages/chart-encuesta-supervisor/chart-encuesta-supervisor.module').then( m => m.ChartEncuestaSupervisorPageModule)
   }
 
 

@@ -16,6 +16,7 @@ export class ChatService {
   sendMessage(mensaje : any)
   {
     const itemsRef = this.db.list(this.chat);
+    console.log(mensaje);
     itemsRef.push(mensaje);
   }
 }

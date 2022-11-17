@@ -27,6 +27,6 @@ import { EncuestaEmpleadoComponent } from 'src/app/components/encuesta-empleado/
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [EncuestasPage, EncuestaSupervisorComponent,EncuestaEmpleadoComponent]
+  declarations: [EncuestasPage]
 })
 export class EncuestasPageModule {}

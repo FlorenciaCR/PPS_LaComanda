@@ -14,6 +14,9 @@ import { MatPseudoCheckboxModule } from '@angular/material/core';
 
 import { ListaDeshabilitadosComponent } from 'src/app/components/lista-deshabilitados/lista-deshabilitados.component';
 import { AltaEmpleadoPage } from 'src/app/components/alta-empleado/alta-empleado.page';
+import { EncuestaSupervisorComponent } from 'src/app/components/encuesta-supervisor/encuesta-supervisor.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatRadioModule } from '@angular/material/radio';
 
 
 @NgModule({
@@ -24,9 +27,11 @@ import { AltaEmpleadoPage } from 'src/app/components/alta-empleado/alta-empleado
     MenuDuenioPageRoutingModule,
     ReactiveFormsModule,
     MatSlideToggleModule,
-    MatPseudoCheckboxModule
+    MatPseudoCheckboxModule,
+    MatMenuModule,
+    MatRadioModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  declarations: [MenuDuenioPage,AltaDuenioSupComponent,ListaDeshabilitadosComponent,AltaEmpleadoPage]
+  declarations: [MenuDuenioPage,AltaDuenioSupComponent,ListaDeshabilitadosComponent,AltaEmpleadoPage,EncuestaSupervisorComponent]
 })
 export class MenuDuenioPageModule {}

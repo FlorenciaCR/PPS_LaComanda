@@ -62,6 +62,9 @@ export class FirestoreService {
   encuestaEmpleadoCollectionReference: any;
   encuestasEmpleados: Observable<any>;
 
+  encuestaSupervisorCollectionReference: any;
+  encuestasSupervisor: Observable<any>;
+
   encuestaArray: any = [];
 
   pedidosConfirmadosCollectionReference: any;
@@ -114,7 +117,8 @@ export class FirestoreService {
     this.encuestaEmpleadoCollectionReference = this.angularF.collection<any>('encuestasEmpleados');
     this.encuestasEmpleados = this.encuestaEmpleadoCollectionReference.valueChanges({ idField: 'id' });
 
-
+    this.encuestaSupervisorCollectionReference = this.angularF.collection<any>('encuestasSupervisores');
+    this.encuestasSupervisor = this.encuestaSupervisorCollectionReference.valueChanges({ idField: 'id' });
   }
 
   traerPedidosConfirmar() {
@@ -244,6 +248,10 @@ export class FirestoreService {
 
   agregarEncuestaEmpleado(encuesta: any) {
     this.encuestaEmpleadoCollectionReference.add({ ...encuesta });
+  }
+
+  agregarEncuestaSupervisor(encuesta: any) {
+    this.encuestaSupervisorCollectionReference.add({ ...encuesta });
   }
 
   agregarPedido(pedido: any) {

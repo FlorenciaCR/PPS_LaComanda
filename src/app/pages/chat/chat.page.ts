@@ -26,17 +26,17 @@ export class ChatPage implements OnInit {
       date: Date().toString(),
     }
 
-    /*this.fs.traerUsuarios().subscribe((value) =>{
+    this.fs.traerUsuarios().subscribe((value) =>{
       this.usuariosArray = value;
       for (const iterator of this.usuariosArray) 
       {
-        if(iterator.nombre == this.fs.usuario.nombre)
+        if(iterator.nombre == this.as.loggedUser.nombre)
         {
           this.usuarioActual = iterator;
           break;
         }
       }
-    })*/
+    })
   }
 
   ngOnInit(){
@@ -49,19 +49,21 @@ export class ChatPage implements OnInit {
     let consulta : any;
      
 
-    this.mensaje.user = this.fs.usuario.nombre;
-    this.mensaje.perfil = this.fs.usuario.perfil;
+    this.mensaje.user = this.usuarioActual.nombre;
+    this.mensaje.perfil = this.usuarioActual.perfil;
     this.mensaje.receptor = "";
     this.mensaje.message = this.mensajeEnviar;
-
+    
     this.mensaje.date = hora.getHours() + ':' + hora.getMinutes();
     consulta = {
-      nombre : this.fs.usuario.nombre,
+      nombre : this.usuarioActual.nombre,
       date : this.mensaje.date,
       mesa : this.usuarioActual.mesa
     }
+    console.log(consulta);
+    console.log(this.mensaje);
     this.chat.sendMessage(this.mensaje);
-    //this.sendPushMensaje();
+    this.sendPushMensaje();
     this.mensaje.message = '';
     this.mensajeEnviar = '';
     this.fs.agregarConsulta(consulta);

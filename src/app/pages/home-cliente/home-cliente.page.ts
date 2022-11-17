@@ -44,8 +44,7 @@ export class HomeClientePage implements OnInit {
   constructor(private as: AuthService, private fs: FirestoreService, private push : PushService,
     private sf: ScannerService, private toastController: ToastController, private router: Router) {
     //Busco en la coleccion de Lista de espera si esta, sino esta sigo en pantalla esperaAsignacionMesa
-    this.escaneoQR = false;
-    this.menuOpciones = true;
+    this.escaneoQR = true;
   }
 
   ngOnInit() {

@@ -8,7 +8,7 @@
         </div>
         
         <div *ngFor="let item of mensajes | async">
-          <div align="end" style="margin-bottom: 10px;" *ngIf='this.fs.usuario.nombre == item.user'>
+          <div align="end" style="margin-bottom: 10px;" *ngIf='this.as.loggedUser.nombre == item.user'>
 
             <ion-row style="height: 30%; flex-grow: 1; position: right;">
               <div style="width: 35%;">
@@ -23,7 +23,7 @@
             
           </div>
 
-          <div align="start" style="margin-bottom: 10px;" *ngIf='item.receptor == this.fs.usuario.nombre'>
+          <div align="start" style="margin-bottom: 10px;" *ngIf='item.receptor == this.as.loggedUser.nombre'>
 
             <ion-row style="height: 30%; flex-grow: 1; position: left;">
 
