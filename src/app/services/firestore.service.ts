@@ -169,6 +169,10 @@ export class FirestoreService {
     return this.encuestasEmpleados;
   }
 
+  traerEncuestasSupervisor() {
+    return this.encuestasSupervisor;
+  }
+
   /*   modificarFoto(foto : any, id : any, coleccion : string)
     {
       return this.angularF.collection(coleccion).doc(id).update(foto);

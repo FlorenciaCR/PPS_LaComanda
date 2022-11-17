@@ -88,7 +88,7 @@ export class ChartEncuestaSupervisorPage implements OnInit {
   ) {
     this.loading = true;
 
-    this.fs.traerEncuestasClientes().subscribe(value => {
+    this.fs.traerEncuestasSupervisor().subscribe(value => {
       this.encuestasClientesArray = [];
 
       this.preguntas1 = [];
@@ -263,13 +263,13 @@ export class ChartEncuestaSupervisorPage implements OnInit {
   calcularDatosPregunta3() {
     for (let index = 0; index < this.encuestasClientesArray.length; index++) {
       switch (this.encuestasClientesArray[index].pregunta3) {
-        case "Mala":
+        case "Mucho":
           this.valorRespuesta3[0]++;
           break;
-        case "Regular":
+        case "Poco":
           this.valorRespuesta3[1]++;
           break;
-        case "Buena":
+        case "Mas o menos":
           this.valorRespuesta3[2]++;
           break;
       }
@@ -280,13 +280,13 @@ export class ChartEncuestaSupervisorPage implements OnInit {
   CargoDatosPregunta3() {
     this.preguntas3 = [
       {
-        "name": "Buena",
+        "name": "Mas o menos",
         "value": this.valorRespuesta3[2]
       }, {
-        "name": "Regular",
+        "name": "Poco",
         "value": this.valorRespuesta3[1]
       }, {
-        "name": "Mala",
+        "name": "Mucho",
         "value": this.valorRespuesta3[0]
       }
     ];
@@ -297,13 +297,13 @@ export class ChartEncuestaSupervisorPage implements OnInit {
   calcularDatosPregunta4() {
     for (let index = 0; index < this.encuestasClientesArray.length; index++) {
       switch (this.encuestasClientesArray[index].pregunta4) {
-        case "Si":
+        case "1":
           this.valorRespuesta4[0]++;
           break;
-        case "No":
+        case "2":
           this.valorRespuesta4[1]++;
           break;
-        case "Más o menos":
+        case "mas de 3":
           this.valorRespuesta4[2]++;
           break;
       }
@@ -314,30 +314,30 @@ export class ChartEncuestaSupervisorPage implements OnInit {
   CargoDatosPregunta4() {
     this.preguntas4 = [
       {
-        "name": "Si",
+        "name": "1",
         "value": this.valorRespuesta4[0]
       }, {
-        "name": "Más o menos",
+        "name": "mas de 3",
         "value": this.valorRespuesta4[2]
       }, {
-        "name": "No",
+        "name": "2",
         "value": this.valorRespuesta4[1]
       }
     ];
   }
 
-  // Chart Pregunta 4
+  // Chart Pregunta 5
   valorRespuesta5: any = [0, 0, 0]; //[Si, No, Tal vez]
   calcularDatosPregunta5() {
     for (let index = 0; index < this.encuestasClientesArray.length; index++) {
       switch (this.encuestasClientesArray[index].pregunta5) {
-        case "Si":
+        case "Resto":
           this.valorRespuesta5[0]++;
           break;
-        case "No":
+        case "Bar":
           this.valorRespuesta5[1]++;
           break;
-        case "Tal vez":
+        case "Ninguna":
           this.valorRespuesta5[2]++;
           break;
       }
@@ -348,13 +348,13 @@ export class ChartEncuestaSupervisorPage implements OnInit {
   CargoDatosPregunta5() {
     this.preguntas5 = [
       {
-        "name": "Si",
+        "name": "Resto",
         "value": this.valorRespuesta5[0]
       }, {
-        "name": "Tal vez",
+        "name": "Ninguna",
         "value": this.valorRespuesta5[2]
       }, {
-        "name": "No",
+        "name": "Bar",
         "value": this.valorRespuesta5[1]
       }
     ];
