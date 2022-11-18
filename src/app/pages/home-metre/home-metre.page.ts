@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
@@ -15,7 +16,9 @@ export class HomeMetrePage implements OnInit {
   listaEspera : any = [];
   mesaSeleccionada : any;
   usuariosArray : any = [];
-  constructor(private fs : FirestoreService, private toastController : ToastController, public as : AuthService) 
+  encuesta:boolean = false;
+  estadisticas:boolean = false;
+  constructor(private fs : FirestoreService, private toastController : ToastController, public as : AuthService,private router: Router) 
   { 
 
   }
@@ -89,6 +92,18 @@ export class HomeMetrePage implements OnInit {
     this.MostrarToast(`La mesa ${this.mesaSeleccionada} ha sido asignada a ${usuario.nombre}`).then((toast : any) =>{
       toast.present();
     });
+  }
+
+  mostrarOcultarEncuesta(){
+    if(this.encuesta){
+      this.encuesta = false;
+    }else{
+      this.encuesta = true;
+    } 
+  }
+
+  irAGraficos(){
+    this.router.navigate(['/chart-encuesta-empleados']);
   }
 
   MostrarToast(message : string)

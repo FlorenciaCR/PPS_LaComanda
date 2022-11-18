@@ -151,15 +151,15 @@ export class EncuestaEmpleadoComponent implements OnInit {
     switch (value) {
       case 1:        
         document.getElementById("respuesta").setAttribute('value',"No");
-        this.respuesta_4 = "No";
+        this.respuesta_5 = "No";
         break;
       case 2:
         document.getElementById("respuesta").setAttribute('value',"Muchos");
-        this.respuesta_4 = "Muchos";
+        this.respuesta_5 = "Muchos";
         break;
       case 3:
         document.getElementById("respuesta").setAttribute('value',"Pocos");
-        this.respuesta_4 = "Pocos";
+        this.respuesta_5 = "Pocos";
         break;
     }   
     //this.respuesta_4 = "";
