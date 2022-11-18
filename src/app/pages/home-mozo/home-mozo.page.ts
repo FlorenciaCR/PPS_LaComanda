@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
@@ -13,7 +14,7 @@ export class HomeMozoPage implements OnInit {
 
   listConfirmarPedido: boolean = true;
   listEnEspera: boolean = false;
-
+  encuesta:boolean = false;
   loading : boolean;
 
   pedidos: any = [];
@@ -35,7 +36,8 @@ export class HomeMozoPage implements OnInit {
     private fs : FirestoreService, 
     private toast : ToastController,
     public as : AuthService,
-    private push : PushService
+    private push : PushService,
+    private router: Router
   ){ 
     this.loading = true;
 
@@ -90,6 +92,18 @@ export class HomeMozoPage implements OnInit {
     }else{
       return false;
     }
+  }
+
+  mostrarOcultarEncuesta(){
+    if(this.encuesta){
+      this.encuesta = false;
+    }else{
+      this.encuesta = true;
+    } 
+  }
+
+  irAGraficos(){
+    this.router.navigate(['/chart-encuesta-empleados']);
   }
 
   async SuccessToastPedidoConfirmado() {

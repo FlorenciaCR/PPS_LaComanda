@@ -17,7 +17,6 @@ export class HomeMetrePage implements OnInit {
   mesaSeleccionada : any;
   usuariosArray : any = [];
   encuesta:boolean = false;
-  estadisticas:boolean = false;
   constructor(private fs : FirestoreService, private toastController : ToastController, public as : AuthService,private router: Router) 
   { 
 
