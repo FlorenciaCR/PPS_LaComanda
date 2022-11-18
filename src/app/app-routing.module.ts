@@ -73,6 +73,10 @@ const routes: Routes = [
   {
     path: 'chart-encuesta-supervisor',
     loadChildren: () => import('./pages/chart-encuesta-supervisor/chart-encuesta-supervisor.module').then( m => m.ChartEncuestaSupervisorPageModule)
+  },
+  {
+    path: 'chart-encuesta-empleados',
+    loadChildren: () => import('./pages/chart-encuesta-empleados/chart-encuesta-empleados.module').then( m => m.ChartEncuestaEmpleadosPageModule)
   }
 
 

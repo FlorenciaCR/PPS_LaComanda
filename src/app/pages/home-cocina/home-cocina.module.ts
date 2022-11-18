@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { HomeCocinaPageRoutingModule } from './home-cocina-routing.module';
 
 import { HomeCocinaPage } from './home-cocina.page';
+import { EncuestaEmpleadoComponent } from 'src/app/components/encuesta-empleado/encuesta-empleado.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { HomeCocinaPage } from './home-cocina.page';
     IonicModule,
     HomeCocinaPageRoutingModule
   ],
-  declarations: [HomeCocinaPage]
+  declarations: [HomeCocinaPage,EncuestaEmpleadoComponent]
 })
 export class HomeCocinaPageModule {}

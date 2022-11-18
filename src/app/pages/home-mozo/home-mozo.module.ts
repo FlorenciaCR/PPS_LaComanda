@@ -8,6 +8,7 @@ import { HomeMozoPageRoutingModule } from './home-mozo-routing.module';
 
 import { HomeMozoPage } from './home-mozo.page';
 import { ChatMozoPage } from '../chat-mozo/chat-mozo.page';
+import { EncuestaEmpleadoComponent } from 'src/app/components/encuesta-empleado/encuesta-empleado.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { ChatMozoPage } from '../chat-mozo/chat-mozo.page';
     IonicModule,
     HomeMozoPageRoutingModule
   ],
-  declarations: [HomeMozoPage,ChatMozoPage]
+  declarations: [HomeMozoPage,ChatMozoPage,EncuestaEmpleadoComponent]
 })
 export class HomeMozoPageModule {}

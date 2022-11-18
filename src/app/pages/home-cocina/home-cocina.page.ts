@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
@@ -16,12 +17,14 @@ export class HomeCocinaPage implements OnInit {
   pedidosEnPreparacionArray: any = []; //Cargo los pedidos con estado En preparacion
 
   loading : boolean;
+  encuesta:boolean = false;
 
   constructor(
     private fs : FirestoreService, 
     private toast : ToastController,
     public as : AuthService,
-    public push:PushService
+    public push:PushService,
+    private router: Router
   ){
     this.loading = true;
     this.push.getUser()
@@ -57,6 +60,18 @@ export class HomeCocinaPage implements OnInit {
     
   }
 
+  mostrarOcultarEncuesta(){
+    if(this.encuesta){
+      this.encuesta = false;
+    }else{
+      this.encuesta = true;
+    } 
+  }
+
+  irAGraficos(){
+    this.router.navigate(['/chart-encuesta-empleados']);
+  }
+
   filtrarPedidosNoEnPreparacion(item){
     if(item.estado == 'en preparacion' && item.estadoCocina == false){      
       return true;
@@ -71,10 +86,10 @@ export class HomeCocinaPage implements OnInit {
     
     if(item.estadoBartender == true){
       item.estado = "terminado"
-      //this.sendPushConfirmaPedido();    
+      this.sendPushConfirmaPedido();    
     }else if(item.estadoBartender == undefined || item.estadoBartender == null){
       item.estado = "terminado"
-      //this.sendPushConfirmaPedido();    
+      this.sendPushConfirmaPedido();    
     }
 
     this.fs.modificarEstadoPedido(item, item.id);
@@ -83,6 +98,23 @@ export class HomeCocinaPage implements OnInit {
     }
     
     this.SuccessToastProductoTerminado();
+  }
+
+  sendPushConfirmaPedido() 
+  {
+    this.push
+      .sendPushNotification({
+        registration_ids: [
+          //TOKENS Mozos
+        ],
+        notification: {
+          title: 'Pedido Terminado',
+          body: 'Hay un pedido para entregar.',
+        },
+      })
+      .subscribe((data) => {
+        console.log(data);
+      });
   }
 
   
