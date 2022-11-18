@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PushService } from 'src/app/services/push.service';
 
 @Component({
   selector: 'app-menu-duenio',
@@ -12,7 +13,9 @@ export class MenuDuenioPage implements OnInit {
   opcionEmpleado: boolean = false;
   opcionEncuesta: boolean = false;
   
-  constructor(private router: Router) { }
+  constructor(private router: Router, private push: PushService) {
+    this.push.getUser();
+   }
 
   ngOnInit() {
   }

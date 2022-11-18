@@ -29,15 +29,18 @@ export class PushService {
   }
   
   async inicializar(): Promise<void> {
-    this.addListeners();
+    
     // Verificamos que este en un dispositivo y no en una Web y tambien que el usuario no tegna seteado el token
     console.log(this.platform.is('capacitor'))
     if (this.platform.is('capacitor') && this.user.token === '') {
       const result = await PushNotifications.requestPermissions();
+      alert("requestPermissions - IMPORTATE")
       // Si el usuario tiene permisos para enviar push notifications
       if (result.receive === 'granted') {
         // Registro de push notification
+        alert("granted")
         await PushNotifications.register();
+        this.addListeners();
       }
     }
   }
@@ -69,7 +72,8 @@ export class PushService {
     await PushNotifications.addListener(
       'registration',
       async (token: Token) => {
-        console.log(token)
+        alert(token.value)
+        alert("token")
         //Aca deberiamos asociar el token a nuestro usario en nuestra bd
         console.log('Registration token: ', token.value);
         const aux = doc(this.firestore, `usuarios/${this.user.id}`);

@@ -158,13 +158,13 @@ export class AltaClientePage implements OnInit {
   
   sendPush() {
     console.log("enviando notificacion...");
-
+    alert("enviando notificacion...")
     this.push
       .sendPushNotification({
         // eslint-disable-next-line @typescript-eslint/naming-convention
         registration_ids: [
           // eslint-disable-next-line max-len
-          'f5VPIwXvRVSXodIjAeLLho:APA91bHeqPI7nlKpd0n3CbxhjifzTZ2jXVOtxwg_x-4qtgb1fVPjEet5PXfIxjNvHxRytOmT1qb2kJji85J5A_dJLt09kaz9hbD2hmH2a7xy1Sz2LboAcIjNSn-bp5q05C1CeLFU2QUe',
+          'dzIUP-1KScGqTml6zh8vSE:APA91bF26m54byXrGwUm9udaBuxXziGnmyh4_gJUWkbxHWIAeBNHPZZyi-2Jv6DBTvGBDa_5l0tPCUl0W-W2mXUtfF2Pd61LqIwy-FY18WWr1izYyMP6l9CQ267z_uXftqFH6h-uPlSj',
         ],
         notification: {
           title: 'Nuevo cliente',
@@ -172,7 +172,7 @@ export class AltaClientePage implements OnInit {
         },
       })
       .subscribe((data) => {
-        console.log(data);
+        alert(data);
       });
   }
 
