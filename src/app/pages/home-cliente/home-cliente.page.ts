@@ -46,6 +46,7 @@ export class HomeClientePage implements OnInit {
     //Busco en la coleccion de Lista de espera si esta, sino esta sigo en pantalla esperaAsignacionMesa
     this.escaneoQR = true;
     this.push.getUser();
+    
   }
 
   ngOnInit() {

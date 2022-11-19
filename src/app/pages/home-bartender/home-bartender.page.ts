@@ -17,6 +17,7 @@ export class HomeBartenderPage implements OnInit {
 
   loading : boolean;
   encuesta:boolean = false;
+  listaUsuarios:any = [];
   constructor(
     private fs : FirestoreService, 
     private toast : ToastController,
@@ -32,6 +33,9 @@ export class HomeBartenderPage implements OnInit {
       this.cargarArrayPedidosEnPreparacion();
     });
     this.push.getUser();
+    this.fs.traerUsuarios().subscribe(value=>{
+      this.listaUsuarios = value;
+    })
   }
 
   ngOnInit() {
@@ -99,11 +103,19 @@ export class HomeBartenderPage implements OnInit {
 
   sendPushConfirmaPedido() 
    {
+    let token;
+    for(let i=0;i<this.listaUsuarios.length;i++){
+      if(this.listaUsuarios[i].perfil == 'Mozo'){
+        token = this.listaUsuarios[i].token;
+        break;
+      }
+    }
+    
      this.push
       .sendPushNotification({
        registration_ids: [
            //TOKENS Mozos
-           'djiEV_n5TtafOIJVOSRSOI:APA91bGnxxEQBz_NJlFF3wXePNflD7Qh7MrDp7wRUIDx-PLRuEuu2p1ELj7HCXuOSfA3M1ziVRZKEviKl-JSgIySW7OLqna3v9uHWPcO-CUH5byQZSUtFs9Ao4RbX8_P896CiLjbDDeV'
+            token
          ],
          notification: {
           title: 'Pedido Terminado',

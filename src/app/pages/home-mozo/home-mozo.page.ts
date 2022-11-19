@@ -41,8 +41,6 @@ export class HomeMozoPage implements OnInit {
   ){ 
     this.loading = true;
 
-
-
     this.fs.traerMesas().subscribe(value =>{
       this.mesasArray = value;
     });
@@ -57,6 +55,7 @@ export class HomeMozoPage implements OnInit {
     this.fs.traerConsultas().subscribe(value => {
       this.consultas = value;
     });
+
     this.push.getUser();
   }
 

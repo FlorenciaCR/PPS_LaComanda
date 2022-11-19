@@ -16,7 +16,6 @@ export class ChatPage implements OnInit {
   mensajeEnviar: any = "";
   usuariosArray : any = [];
   usuarioActual : any;
-
   constructor(private chat:ChatService,public as : AuthService, public fs : FirestoreService, public push : PushService) { 
     this.mensajes = chat.items;
     console.log(this.mensajes);
@@ -72,12 +71,21 @@ export class ChatPage implements OnInit {
 
   sendPushMensaje() 
   {
+    let token;
+    
+    for(let i=0;i<this.usuariosArray.length;i++){
+      if(this.usuariosArray[i].perfil == 'Mozo'){
+        token = this.usuariosArray[i].token;
+        break;
+      }
+    }
+ 
     this.push
       .sendPushNotification({
         // eslint-disable-next-line @typescript-eslint/naming-convention
         registration_ids: [
           // eslint-disable-next-line max-len
-          'djiEV_n5TtafOIJVOSRSOI:APA91bGnxxEQBz_NJlFF3wXePNflD7Qh7MrDp7wRUIDx-PLRuEuu2p1ELj7HCXuOSfA3M1ziVRZKEviKl-JSgIySW7OLqna3v9uHWPcO-CUH5byQZSUtFs9Ao4RbX8_P896CiLjbDDeV',
+          token
         ],
         notification: {
           title: 'Nuevo mensaje.',
