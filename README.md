@@ -1,4 +1,4 @@
-# Los pollos hermanos 🐔🐔🍗🍗
+# Los pollos hermanos 🐔🐔🍗🍗 APLICACION TERMINADA!!! ✅    
 
 # 📌 Primera semana  
 ### Florencia Colodro  
