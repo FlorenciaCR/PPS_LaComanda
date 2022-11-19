@@ -42,7 +42,8 @@ Ingresar al local
 ### Maximiliano Fernandez    
 Realizar pedidos (platos y bebidas)   
 Qr de propina  
-   
+Push notification  
+Splash estatico     
    
    
    
@@ -106,7 +107,7 @@ Fecha de Inicio: 7/11/22
 Fecha de Final: 7/11/22    
 Branch: Gamma-Fernandez  
 
-+ 5-Modulo: Splash Estatico   
++ 5-Modulo: Splash Estatico ✅     
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
 Branch: Gamma-Fernandez 
@@ -116,7 +117,7 @@ Fecha de Inicio: 28/10/2022
 Fecha de Final: 29/10/2022  
 Branch: Gamma-Fernandez 
 
-+ 7-Modulo: Push Notification(Completo)    
++ 7-Modulo: Push Notification  ✅    
 Fecha de Inicio: A definir  
 Fecha de Final: A definir  
 Branch: Gamma-Fernandez 
