@@ -56,7 +56,8 @@ export class HomeMozoPage implements OnInit {
 
     this.fs.traerConsultas().subscribe(value => {
       this.consultas = value;
-  });
+    });
+    this.push.getUser();
   }
 
   ngOnInit() {    

@@ -31,6 +31,7 @@ export class HomeBartenderPage implements OnInit {
       this.pedidosEnPreparacion = value;
       this.cargarArrayPedidosEnPreparacion();
     });
+    this.push.getUser();
   }
 
   ngOnInit() {

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
+import { PushService } from 'src/app/services/push.service';
 
 @Component({
   selector: 'app-home-metre',
@@ -17,9 +18,9 @@ export class HomeMetrePage implements OnInit {
   mesaSeleccionada : any;
   usuariosArray : any = [];
   encuesta:boolean = false;
-  constructor(private fs : FirestoreService, private toastController : ToastController, public as : AuthService,private router: Router) 
+  constructor(private fs : FirestoreService, private toastController : ToastController, public as : AuthService,private router: Router,private push: PushService) 
   { 
-
+    this.push.getUser();
   }
 
   ngOnInit() 

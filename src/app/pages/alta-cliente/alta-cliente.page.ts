@@ -164,7 +164,8 @@ export class AltaClientePage implements OnInit {
         // eslint-disable-next-line @typescript-eslint/naming-convention
         registration_ids: [
           // eslint-disable-next-line max-len
-          'dzIUP-1KScGqTml6zh8vSE:APA91bF26m54byXrGwUm9udaBuxXziGnmyh4_gJUWkbxHWIAeBNHPZZyi-2Jv6DBTvGBDa_5l0tPCUl0W-W2mXUtfF2Pd61LqIwy-FY18WWr1izYyMP6l9CQ267z_uXftqFH6h-uPlSj',
+          'cjeTv_9sQdaEoptaOzdTV5:APA91bHv4SlYPSyIPj8gnWj_zaFFKvBWCtyfXIrg7wsPoDfEPzSY_autwadD6HNUnpxIpPt98arAzzjmqSv3TS0q-gs1PZZanILNFxlYS7WK8Roz1Z066uYhjJ7uWmioYBXY6DZ6v6st',
+          'dJnzKl8aRJq_3n_Ld8vFdE:APA91bEtzhRH4xCu8tR6Uiu7IxLENEWep_ZLh4-vQdiBX6N6r2GBZsiTAp0w5NRB3AUDArbUGcNOedlx1XLnPt5bUkrE0VOu5BcoKtcg4z65oOkfwgUe8nuT1o9qGYUvo5ZGEtvA5dr6'
         ],
         notification: {
           title: 'Nuevo cliente',
