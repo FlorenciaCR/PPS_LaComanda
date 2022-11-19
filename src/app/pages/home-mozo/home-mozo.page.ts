@@ -176,7 +176,8 @@ export class HomeMozoPage implements OnInit {
         // eslint-disable-next-line @typescript-eslint/naming-convention
         registration_ids: [
           // eslint-disable-next-line max-len
-          'dAlQVdRsThOgHtF1itYfxm:APA91bGyHgCrz8SL_n1b7tnqMuyKPALq3018zuaB1k6C-ZpD9P5AQ8Tq9OepQybBDbRAHMbPONUJXcAPPsVxbvqdb87d3Jg2r5kE_pZ3FlqbiP1igeKSSzVa0lA8O05VimNtDhAmCaN0',
+          'eZzkJK81RWa_rBS5r_Oq_Q:APA91bEyxJ1skDlO-_a3ZdTLxWpaazvFGIXWez4VYZFRQpxxcmBmwbqUvESCMeJOdxNissdvZUjis44IbAALvXXKbcBPjPHoQkgC1B0sWbZqZHFWEEfDPAATD8JGFZIq7XuBQMY7YStq',
+          'ewFLpEGgSMqj0gNzBVjT6e:APA91bGXuBtj25lfwEy844VV2XjHhb8qVI2KAovOq3gr6hX5rCIjbM2ARQ7Ki2oYTohrQ-BN0wcv2UtyagFe7m1yj18DwM234Oj6XKorDmEkEgPvUR95b69YYtlJY7lDucXQRyj45qib'
         ],
         notification: {
           title: 'Nuevo pedido.',

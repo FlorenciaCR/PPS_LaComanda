@@ -165,7 +165,7 @@ export class HomeClientePage implements OnInit {
         registration_ids: [
           // eslint-disable-next-line max-len
           //aca iria el token de metre
-          'ddAwLdvvRW2BCWGeF41CL2:APA91bH3zxdbwwdDlD4n1qCrZhjrZwigEGyZs1qPrBpTUcroteMgl9snhP57Eth46tUXCq2iFPiooFFs4QsBmMLwUpxoiUJ6qWARc94XGUPa9jJZHdY7__-TMoDCN81CL4Tf5ybeM5Xb',
+          'eZzkJK81RWa_rBS5r_Oq_Q:APA91bEyxJ1skDlO-_a3ZdTLxWpaazvFGIXWez4VYZFRQpxxcmBmwbqUvESCMeJOdxNissdvZUjis44IbAALvXXKbcBPjPHoQkgC1B0sWbZqZHFWEEfDPAATD8JGFZIq7XuBQMY7YStq',
         ],
         notification: {
           title: 'Lista de Espera',

@@ -33,6 +33,7 @@ export class HomeCocinaPage implements OnInit {
       this.pedidosEnPreparacion = value;
       this.cargarArrayPedidosEnPreparacion();
     });
+    this.push.getUser();
   }
 
   ngOnInit() {
@@ -106,10 +107,11 @@ export class HomeCocinaPage implements OnInit {
       .sendPushNotification({
         registration_ids: [
           //TOKENS Mozos
+          'ewFLpEGgSMqj0gNzBVjT6e:APA91bGXuBtj25lfwEy844VV2XjHhb8qVI2KAovOq3gr6hX5rCIjbM2ARQ7Ki2oYTohrQ-BN0wcv2UtyagFe7m1yj18DwM234Oj6XKorDmEkEgPvUR95b69YYtlJY7lDucXQRyj45qib'
         ],
         notification: {
           title: 'Pedido Terminado',
-          body: 'Hay un pedido para entregar.',
+          body: 'Pedido de cocina listo.',
         },
       })
       .subscribe((data) => {

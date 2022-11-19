@@ -29,7 +29,7 @@ export class PushService {
   }
   
   async inicializar(): Promise<void> {
-    
+    this.addListeners();
     // Verificamos que este en un dispositivo y no en una Web y tambien que el usuario no tegna seteado el token
     console.log(this.platform.is('capacitor'))
     if (this.platform.is('capacitor') && this.user.token === '') {
@@ -40,7 +40,7 @@ export class PushService {
         // Registro de push notification
         alert("granted")
         await PushNotifications.register();
-        this.addListeners();
+        
       }
     }
   }
