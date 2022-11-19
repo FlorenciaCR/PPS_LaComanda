@@ -101,7 +101,7 @@ export class HomeClientePage implements OnInit {
       if (datoAComparar == "@Local") {
         this.escaneoQR = false;
         this.menuOpciones = true;
-        this.sendPushMetre();
+        
       }
       else {
         if (this.fs.sonido) {
